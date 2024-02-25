@@ -26,7 +26,7 @@ Además de los enlaces a los sitios oficiales, se proporcionan enlaces a documen
 
 USO:
 
-Copiar y pegar en tu hoja de gitbook, github, o cualquier otro digamos interpreter de markdownd y listo, en modo edicion empesar. :D
+Copiar y pegar en tu hoja de gitbook, github, o cualquier otro digamos interpreter de markdown y listo, en modo edicion empesar.(RECOMENDACION TENER EL GITHUB SINCRONIZADO CON TU GITBOOK PARA PEGARLO DIRECTAMENTE EN UNA HOJA DE GITHUB Y EDITARLO DESDE ALLI DADO QUE GITBOOK TIENE MUCHOS TIRONES, Y AL GUARDARLO VERAS LA PLANTILLA INTERPRETADA EN MARKDOWN EN AMBAS PLATAFORMA CON LA INFO Y FOTOS QUE HALLAS AGREGADO ARRASTRANDOLAS AL DOCUMENTO EN EDICION DE GITHUB ) :D
 
 La primer planilla es la con desplegables por cada etapa con  un estilo mas minimalista, y la segunda es la plantilla completa sin estos desplegables.
 
