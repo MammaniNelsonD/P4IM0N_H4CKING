@@ -1,2 +1,0 @@
-# 👊 RECONOCIMIENTO ACTIVO
-

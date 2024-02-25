@@ -1,0 +1,2 @@
+# 🤖 Copy of PLANILLA AUDITORIA DE  MAQUINAS
+

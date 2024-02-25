@@ -1,2 +1,0 @@
-# 💪 FUERZA BRUTA A LOGINS
-
