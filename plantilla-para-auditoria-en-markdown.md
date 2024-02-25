@@ -1,4 +1,28 @@
-# 🧑‍🏫 PLANTILLA PARA AUDITORIA EN MARKDOWN
+# 🧑‍🏫 PLANTILLA PARA AUDITORIA DE HACKING EN MARKDOWN
+
+Quiero compartir una plantilla que he creado para llevar a cabo auditorías de manera sistemática y efectiva en sistemas y aplicaciones. Esta herramienta está diseñada para ser una guía completa que cubre desde el reconocimiento pasivo hasta el análisis forense, integrando una variedad de herramientas y técnicas para cada fase del proceso.
+
+### Introducción
+
+La auditoría de sistemas y aplicaciones es una parte fundamental de la seguridad informática. Con el aumento de las amenazas cibernéticas, es crucial contar con herramientas y metodologías adecuadas para identificar y mitigar vulnerabilidades en nuestros sistemas.
+
+### Características Principales
+
+#### 1. Organización Estructurada
+
+La plantilla está organizada en diferentes secciones, cada una correspondiente a una etapa específica del proceso de auditoría. Esto permite una navegación clara y una ejecución ordenada de las tareas.
+
+#### 2. Funcionalidad de Checkboxes
+
+Cada plantilla y técnica incluida en la herramienta está representada por un checkbox. Esto permite hacer un seguimiento fácil del progreso de la auditoría, marcando cada paso a medida que se completa.
+
+#### 3. Enlaces Directos a Sitios Oficiales
+
+Para facilitar el acceso a las herramientas, se incluyen enlaces directos a los sitios web oficiales de cada herramienta. Esto asegura que los usuarios puedan descargar las herramientas más recientes y obtener información adicional sobre su funcionamiento.
+
+#### 4. Enlaces a Documentación en PDF
+
+Además de los enlaces a los sitios oficiales, se proporcionan enlaces a documentación en PDF alojada en mi propio GitBook. Esta documentación incluye tutoriales detallados sobre cómo utilizar cada herramienta en el contexto de la auditoría, lo que facilita su aprendizaje y aplicación.
 
 ````markdown
 // Some code
@@ -1909,3 +1933,4 @@
 ----------------------------------------------------------------
 ```
 ````
+
