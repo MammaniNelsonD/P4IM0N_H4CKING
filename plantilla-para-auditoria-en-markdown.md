@@ -33,7 +33,7 @@ La primer planilla es la con desplegables por cada etapa con  un estilo mas mini
 
 
 ````
-// Some code
+// markdown
 
 # 💀 WRITEUP EXTENSO
 
