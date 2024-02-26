@@ -18,3 +18,15 @@ En resumen, Metasploit es una herramienta poderosa que se utiliza para evaluar l
 
 
 {% file src="../../.gitbook/assets/Metasploit (español).pdf" %}
+
+
+
+<figure><img src="../../.gitbook/assets/Metasploit-Framework-Guide-1-pdf.png" alt=""><figcaption></figcaption></figure>
+
+
+
+{% file src="../../.gitbook/assets/Metasploit Framework Guide.pdf" %}
+
+
+
+{% file src="../../.gitbook/assets/Metasploit Framework Guide (español).pdf" %}
