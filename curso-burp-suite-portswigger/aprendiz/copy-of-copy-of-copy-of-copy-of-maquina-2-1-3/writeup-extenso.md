@@ -4,7 +4,7 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor del selector jQuery usando un evento hashchange))
+### AUDITORIA DE: ((Laboratorio: XSS reflejado en una cadena de JavaScript con corchetes angulares codificados en HTML))
 
 ***
 

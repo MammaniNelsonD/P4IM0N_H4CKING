@@ -1,10 +1,10 @@
-# 👨‍🏫 WRITEUP RESUMEN
+# 💀 WRITEUP EXTENSO
 
 <details>
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: XSS reflejado en una cadena de JavaScript con corchetes angulares codificados en HTML))
+### AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor del selector jQuery usando un evento hashchange))
 
 ***
 
@@ -28,6 +28,195 @@
     ![DOM-XSSenSelectorEventoHASHCHANGE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/a170860c-2a92-4d05-ad6e-8c8978af4742)
 
     * CONCLUSION: ENCONTRAMOS EN EL HTML DEL HOME EL SCRIPT QUE MANEJA EL SELECTOR JQUERY EN EL EVENTO HASHCHANGE.
+*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WAYBACKMACHINE👈 --------------------------------->[https://archive.org/web/](https://archive.org/web/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] MALTEGO👈 --------------------------------->[https://www.maltego.com/](https://www.maltego.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] CENSYS👈 --------------------------------->[https://search.censys.io/](https://search.censys.io/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WEB-CHECK👈 --------------------------------->[https://web-check.xyz/](https://web-check.xyz/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] THEHARVESTER👈 --------------------------------->[https://github.com/laramies/theHarvester](https://github.com/laramies/theHarvester)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WAPPALYZER👈 --------------------------------->[https://www.wappalyzer.com/](https://www.wappalyzer.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] DNSdumpster👈 --------------------------------->[https://dnsdumpster.com/](https://dnsdumpster.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] ROBTEX👈 --------------------------------->[https://www.robtex.com/#google\_vignette](https://www.robtex.com/#google\_vignette)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WHOIS👈 --------------------------------->[https://who.is/](https://who.is/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] NSLOOKUP👈 --------------------------------->[https://www.nslookup.io/](https://www.nslookup.io/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] GHUNT👈 --------------------------------->[https://github.com/mxrch/GHunt](https://github.com/mxrch/GHunt)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] LLANTUN👈 --------------------------------->[https://github.com/lesandcl/Llaitun](https://github.com/lesandcl/Llaitun)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] DISCOVER👈 --------------------------------->[https://github.com/leebaird/discover](https://github.com/leebaird/discover)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SHERLOCK👈 --------------------------------->[https://github.com/sherlock-project/sherlock](https://github.com/sherlock-project/sherlock)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WHATWEB👈 --------------------------------->[https://www.kali.org/tools/whatweb/](https://www.kali.org/tools/whatweb/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] DIAGRAMAS👈 --------------------------------->[https://app.diagrams.net/](https://app.diagrams.net/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] P4INformesmentales👈 --------------------------------->[https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py](../../../curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
 
 ***
 
@@ -1259,6 +1448,97 @@
 
 #### SCRIPT DE EXPLOIT Y PAYLOADS
 
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SEARCHSPLOIT👈 --------------------------------->[https://www.kali.org/tools/exploitdb/](https://www.kali.org/tools/exploitdb/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] EXPLOITDB👈 --------------------------------->[https://www.exploit-db.com/](https://www.exploit-db.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] GITHUB SEARCH👈 --------------------------------->[https://github.com/search](https://github.com/search)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] AWESOMEHACKING👈 --------------------------------->[https://awesomehacking.org/](https://awesomehacking.org/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] NVD VULNERABILITIES BASE👈 --------------------------------->[https://nvd.nist.gov/vuln](https://nvd.nist.gov/vuln)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] MSFVENOM PAYLOAD👈 --------------------------------->[https://www.kali.org/tools/metasploit-framework/ ](https://www.kali.org/tools/metasploit-framework/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/msfvenom-generador-de-payloads)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] MSFPC PAYLOAD👈 --------------------------------->[https://www.kali.org/tools/msfpc/](https://www.kali.org/tools/msfpc/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] RAPID7 vulnerabilidades y exploits👈 --------------------------------->[https://www.rapid7.com/db/](https://www.rapid7.com/db/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] HACKTRICKS👈 --------------------------------->[https://book.hacktricks.xyz/v/es/welcome/readme](https://book.hacktricks.xyz/v/es/welcome/readme)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] HACKTOOL👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] HACKTOOL👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
 *   [x] PORTSWIGGER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
@@ -1266,6 +1546,13 @@
     ```
 
     * CONCLUSION:NO SE TERMINO DE COMPRENDER BIEN LA EJECUCION; PERO TUVIMOS QUE MANDAR ESTA CARGA UTIL DESDE NEUSTRO SERVIDOR MALISIOSO A LA VICTIMA Y A ESTA SE ELE EJECUTARIA LAS OPCIONES DE IMPRECION DE LA URL INDICADA EN SRC Y NADAD MAS; SE COMPLICO HASTA QUE AL FIN LO TOMO EL LABORATORIO, LUEGO DE PROBAR MUCHAS CARGAS POR NUESTRA CUENTA.
+*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
 
 ***
 
@@ -1421,6 +1708,174 @@
     ```
 
     * CONCLUSION: NO SE OBSERVA NADA.
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] CRACKMAPEXEC👈 --------------------------------->[https://www.kali.org/tools/crackmapexec/](https://www.kali.org/tools/crackmapexec/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] CRACKMAPEXEC👈 --------------------------------->[https://www.kali.org/tools/crackmapexec/](https://www.kali.org/tools/crackmapexec/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] VELO👈 --------------------------------->[https://github.com/Veil-Framework/Veil](https://github.com/Veil-Framework/Veil)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WEB2ATTACK👈 --------------------------------->[https://github.com/santatic/web2attack](https://github.com/santatic/web2attack)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] COMMIX👈 --------------------------------->[https://www.kali.org/tools/commix/](https://www.kali.org/tools/commix/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] WEBSPLOIT👈 --------------------------------->[https://github.com/The404Hacking/websploit](https://github.com/The404Hacking/websploit)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] BEEF FRAMEWORK EXPLOTACION👈--------------------------------->[https://www.kali.org/tools/beef-xss/](https://www.kali.org/tools/beef-xss/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] HACKTRICKS👈 --------------------------------->[https://book.hacktricks.xyz/v/es/welcome/readme](https://book.hacktricks.xyz/v/es/welcome/readme)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
 
 ***
 
