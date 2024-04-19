@@ -3,6 +3,7 @@
 * [🕵️‍♂️ Marco AnalisisWeb](README.md)
   * [Pasos Pentesting WEB](https://github.com/MammaniNelsonD/MARCODETRABAJOanalisisWEB-uLock-)
 * [🧑‍🏫 PLANTILLA PARA AUDITORIA DE HACKING EN MARKDOWN](plantilla-para-auditoria-en-markdown.md)
+* [Page](page.md)
 * [⚔️ CURSO PENTESTER JR.](curso-pentester-jr./README.md)
   * [📕 PDF MANUAL PENTESTING](curso-pentester-jr./pdf-manual-pentesting.md)
   * [🕵️ HACKEO WEB](curso-pentester-jr./hackeo-web/README.md)
