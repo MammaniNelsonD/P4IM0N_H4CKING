@@ -4,22 +4,20 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: Vulnerabilidad CSRF sin defensas))
+#### AUDITORIA DE: ((Laboratorio: Vulnerabilidad CSRF sin defensas))
 
 ***
 
 ***
 
-#### RECONOCIMIENTO PASIVO
+**RECONOCIMIENTO PASIVO**
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    
     ```
 
-    ![CSRFenformulariodecambiodeMAIL](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/6771990f-c3cf-4478-91ce-4d69d87f3b8d)
-
+    ![CSRFenformulariodecambiodeMAIL](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/6771990f-c3cf-4478-91ce-4d69d87f3b8d)
 
     * CONCLUSION: ENCONTRAMOS QUE EL FORMULARIO DE CAMBIO DE EMAIL ES VULNERABLE A CSRF POR LO QUE TRABAJAREMOS SOBRE SU SOLICITUD PARA HACER REALIZAR A UNA VICTIMA SIMULADA QUE REALIZE LA ACCION DE CAMBIAR SU EMAIL POR NUESTRO EMAIL MALISICOSO A TRAVES DE UN LINK CON HTML DE PAYLOAD QUE INDIQUE REALIZAR ESTA SOLICITUD DADO QUE NO LA VERIFICA POR EL CSRF.
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
@@ -224,7 +222,7 @@
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-#### ANALISIS FORENSE
+**ANALISIS FORENSE**
 
 *   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
@@ -421,7 +419,7 @@
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-#### RECONOCIMIENTO ACTIVO
+**RECONOCIMIENTO ACTIVO**
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -856,7 +854,7 @@
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-#### INVESTIGACION OSINT
+**INVESTIGACION OSINT**
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -1053,7 +1051,7 @@
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-#### HASHES Y DESENCRIPTADOS
+**HASHES Y DESENCRIPTADOS**
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1278,7 +1276,7 @@
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-#### FUERZA BRUTA A LOGINS
+**FUERZA BRUTA A LOGINS**
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1440,7 +1438,7 @@
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-#### SCRIPT DE EXPLOIT Y PAYLOADS
+**SCRIPT DE EXPLOIT Y PAYLOADS**
 
 *   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
@@ -1559,8 +1557,7 @@
     </html>
     ```
 
-    ![PAYLOAD-HTML-paraexplotarvulnerabilidadCSRFenformulariodecambioMAIL2](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/4c404e93-61bc-4993-a32f-6b21cbc452cc)
-
+    ![PAYLOAD-HTML-paraexplotarvulnerabilidadCSRFenformulariodecambioMAIL2](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/4c404e93-61bc-4993-a32f-6b21cbc452cc)
 
     * CONCLUSION:CON EL PAYLODAD MONTADO EN NUESTRO SERVIDOR, Y EN SU HTML UN INPUT OCULTO QUE GIUARDA COMO VALOS NUESTRO MAIL DE ATACANTE Y UN SCRIPT BERVE PARA QUE CUANDO EL USUARIO REALIZE CLINK EN EL LINK ESTE SCRIPT SE EJECUTE REALIZANDO AUTOMATICAMENTE EL ENVIO DEL FORMULARIO SIN REQUERIR LA MANIPULACION DE LA VITIMA DIRECTAMENTE, POR ENDE DE FORMA INVOLUNTARIA LA VICTIMA TERMINA HACIENDO EL CAMBIO DE SU MAIL A MI MAIL MALISIOSO POR ESTA VULNERABILIDAD DE CSRF EN EL SITIO.
 *   [ ] COMPLETAR...👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
@@ -1583,7 +1580,7 @@
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-#### EXPLOTACION
+**EXPLOTACION**
 
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
@@ -1609,19 +1606,19 @@
     Sec-Fetch-Site: same-origin
     Sec-Fetch-User: ?1
     Te: trailers
-    
+
     email=P4IM0N%40hotmail.com
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     REQUEST DEL USUARIO VICTIMA DEL PAYLOAD AL HACER CLICK AL LINK:
-    
-    
-    
-    
+
+
+
+
     POST /my-account/change-email HTTP/2
     Host: 0a8100d104f324c982ec70c4002500a5.web-security-academy.net
     Cookie: session=EldoSHDpwT1T8gDu60u9vgof5sWDY09k; session=CFenbsEnUZ29kezAApYAYde97k2jkRTx
@@ -1638,7 +1635,7 @@
     Sec-Fetch-Mode: navigate
     Sec-Fetch-Site: cross-site
     Te: trailers
-    
+
     email=malisiosoP4IM0Nmalisioso%40hotmail.com
     ```
 
@@ -1824,7 +1821,7 @@
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS WINDOWS
+**ESCALADA DE PRIVILEGIOS WINDOWS**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2084,7 +2081,7 @@
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS LINUX
+**ESCALADA DE PRIVILEGIOS LINUX**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2309,7 +2306,7 @@
 
 <summary>♻️ PIVOTING ❌</summary>
 
-#### PIVOTING
+**PIVOTING**
 
 *   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 

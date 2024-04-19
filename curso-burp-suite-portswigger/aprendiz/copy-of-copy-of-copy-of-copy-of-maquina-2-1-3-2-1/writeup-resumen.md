@@ -4,13 +4,13 @@
 
 <summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
 
-### AUDITORIA DE: ((Laboratorio: Clickjacking con datos de entrada de formulario precargados desde un parámetro de URL))
+#### AUDITORIA DE: ((Laboratorio: Clickjacking con datos de entrada de formulario precargados desde un parámetro de URL))
 
 ***
 
 ***
 
-#### RECONOCIMIENTO PASIVO
+**RECONOCIMIENTO PASIVO**
 
 *   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -21,10 +21,9 @@
      https://0ae6004c031554d38211e241003d006e.web-security-academy.net/my-account?email=paimonMALISIOSO@hotmail.com
     ```
 
-    ![CLICKHACKINGconPARAMETROcargandoEMAILmalisioso](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/f0ce3c5e-d535-4e66-bfa1-d06dc6ff9f2f)
+    ![CLICKHACKINGconPARAMETROcargandoEMAILmalisioso](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/f0ce3c5e-d535-4e66-bfa1-d06dc6ff9f2f)
 
-
-    * CONCLUSION: ENCONTRAMOS LA FORMA DE CARGAR PREVIAMENTE EL PARAMETRO DEL FORMULARIO DEL CAMBIO DEL MAIL PARA QUE SE CARGE NUESTRO MAIL MALISIOSO, LO IDENTIFICAMOS BUSCANDO EL NAME DEL FORMULARIO QUE ESTA EN EL IMPUT Y LO CARGAMOS CON UNA query EN KLA URL SEGUIDA DEL PARAMETRO Y ELCOMO VALOR NEUSTRO MAIL &Y FUNCIONO; TMABIEN LO COMPROVAMOS CON BURPSUITE
+    * CONCLUSION: ENCONTRAMOS LA FORMA DE CARGAR PREVIAMENTE EL PARAMETRO DEL FORMULARIO DEL CAMBIO DEL MAIL PARA QUE SE CARGE NUESTRO MAIL MALISIOSO, LO IDENTIFICAMOS BUSCANDO EL NAME DEL FORMULARIO QUE ESTA EN EL IMPUT Y LO CARGAMOS CON UNA query EN KLA URL SEGUIDA DEL PARAMETRO Y ELCOMO VALOR NEUSTRO MAIL \&Y FUNCIONO; TMABIEN LO COMPROVAMOS CON BURPSUITE
 
 ***
 
@@ -38,7 +37,7 @@
 
 <summary>🔬 ANALISIS FORENSE ❌</summary>
 
-#### ANALISIS FORENSE
+**ANALISIS FORENSE**
 
 *   [ ] AUTOPSY👈 [https://tools.kali.org/forensics/autopsy](https://tools.kali.org/forensics/autopsy)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/autopsy-digital-forensics.md)
 
@@ -235,7 +234,7 @@
 
 <summary>👊 RECONOCIMIENTO ACTIVO ❌</summary>
 
-#### RECONOCIMIENTO ACTIVO
+**RECONOCIMIENTO ACTIVO**
 
 *   [ ] PING👈 --------------------------------->[https://www.kali.org/tools/fping/](https://www.kali.org/tools/fping/)
 
@@ -670,7 +669,7 @@
 
 <summary>🕵️ INVESTIGACION OSINT ❌</summary>
 
-#### INVESTIGACION OSINT
+**INVESTIGACION OSINT**
 
 *   [ ] OSINT Framework👈 --------------------------------->[https://osintframework.com/](https://osintframework.com/)
 
@@ -867,7 +866,7 @@
 
 <summary>⛓️ HASHES Y DESENCRIPTADOS ❌</summary>
 
-#### HASHES Y DESENCRIPTADOS
+**HASHES Y DESENCRIPTADOS**
 
 *   [ ] JOHN THE RIPPER👈 --------------------------------->[https://www.kali.org/tools/john/ ](https://www.kali.org/tools/john/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/john-the-ripper)
 
@@ -1092,7 +1091,7 @@
 
 <summary>💪 FUERZA BRUTA A LOGINS ❌</summary>
 
-#### FUERZA BRUTA A LOGINS
+**FUERZA BRUTA A LOGINS**
 
 *   [ ] HYDRA👈 --------------------------------->[https://www.kali.org/tools/hydra/ ](https://www.kali.org/tools/hydra/)--->[PDF-TOOL](https://paimonhacking.gitbook.io/p4im0n\_h4cking/manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/hydra-fuerza-bruta)
 
@@ -1254,7 +1253,7 @@
 
 <summary>🛠️ SCRIPT DE EXPLOIT Y PAYLOADS ✔️</summary>
 
-#### SCRIPT DE EXPLOIT Y PAYLOADS
+**SCRIPT DE EXPLOIT Y PAYLOADS**
 
 *   [x] PROPIO👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
@@ -1263,9 +1262,9 @@
 
 
     PRIMERO TARBAJAMOS SOBRE EL IFRAME DE NUESTRO WSUUARIO WIENER PARA CALCULAR LA POSICION DEL SUPUESTO BOTON DE CLICKHACKIN DE NEUSTRO DIV:
-    
-    
-    
+
+
+
     <style>
         iframe {
             position:relative;
@@ -1284,10 +1283,10 @@
     <div>Click me</div>
     <iframe src="https://0ae6004c031554d38211e241003d006e.web-security-academy.net/my-account?email=paimonMALISIOSO@hotmail.com"></iframe>
     ```
-    ![PAYLOADdelCLICKHACKINyalisto](https://github.com/MammaniNelsonD/P4IM0N_H4CKING/assets/114308492/78ccfea2-5cfc-4da7-af71-a8dcd5f14b82)
 
+    ![PAYLOADdelCLICKHACKINyalisto](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/78ccfea2-5cfc-4da7-af71-a8dcd5f14b82)
 
-    * CONCLUSION:PERSONALIZAMOS LA URL CON EL PARAMETRO DEL MAIL CARGADO CON NUESTRO MAIL MALICIOOS. RESOLVIMOS LA CARGA DEL QUE VA A TENER DEL IFRAME DE SITIO DE LA CUENTA DEL USUARIO (YA CON NUESTRO MAIL MALISIOSO CARGADO EN EL PARAMETRO DE CAMBIO DE MAIL) CUANDO ESTE HAGA CLICK EN EL LINK DEL EXPLOIT, y LO VIMOS EN EL RESPONSE EL VALUE CARGADO CON NUESTRO MAIL MALISIOOSO.  LUEGO DE COLOCAR NUESTRO BOTON PARA QUE SE PRODUSCA EL CLICKHACKING DEL USUARIO PENSANDO QUE ESTA HACIENDO CLICK EN ALGUN OTRO BODY QUE LE PONGAMOS DE FONDO (EJEMPLO UN PREMIO CON UN SUPUESTO BOTON EN EL DIV, QUE NOSOTROS ACOMODAMOS CON SU POSITION SOBRE EL IFRAME DEL ACOUNT DEL SITIO WEB QUE AL HACER CLICK EN EL LINK L USUARIO LO LLEVARA DIRECTAMENTE A SU ACOUNT OSEA A SU PERFIL DADO QUE SERIA COMO UNA RUTA RLATIVA QUE SE CARGARA CON SU PERFIL POR QUE  EL Y AESTARIA CON SUS COOKIES; Y COMO NOSOSTROS POSICIONAMOS NEUSTRO DIV (BOTON) SIMULANDO SER UN PREMIO, SOBRE EL BOTON DE ELIMINAR CUENTA DE SU PERFIL; EL MISMO SIN DARCE CUENTA ESTARA HACIENDO CLICK ELIMINANDOCE EL MISMO, EXPLOTANDOCE ESTA VULNERABILIDAD DE CLICKHACKING CON CSRF DADO QUE SE ESTA CARGANDO DEL LADO DEL USUARIO VICTIMA EN EL IFRAME DEL SITIO.
+    * CONCLUSION:PERSONALIZAMOS LA URL CON EL PARAMETRO DEL MAIL CARGADO CON NUESTRO MAIL MALICIOOS. RESOLVIMOS LA CARGA DEL QUE VA A TENER DEL IFRAME DE SITIO DE LA CUENTA DEL USUARIO (YA CON NUESTRO MAIL MALISIOSO CARGADO EN EL PARAMETRO DE CAMBIO DE MAIL) CUANDO ESTE HAGA CLICK EN EL LINK DEL EXPLOIT, y LO VIMOS EN EL RESPONSE EL VALUE CARGADO CON NUESTRO MAIL MALISIOOSO. LUEGO DE COLOCAR NUESTRO BOTON PARA QUE SE PRODUSCA EL CLICKHACKING DEL USUARIO PENSANDO QUE ESTA HACIENDO CLICK EN ALGUN OTRO BODY QUE LE PONGAMOS DE FONDO (EJEMPLO UN PREMIO CON UN SUPUESTO BOTON EN EL DIV, QUE NOSOTROS ACOMODAMOS CON SU POSITION SOBRE EL IFRAME DEL ACOUNT DEL SITIO WEB QUE AL HACER CLICK EN EL LINK L USUARIO LO LLEVARA DIRECTAMENTE A SU ACOUNT OSEA A SU PERFIL DADO QUE SERIA COMO UNA RUTA RLATIVA QUE SE CARGARA CON SU PERFIL POR QUE EL Y AESTARIA CON SUS COOKIES; Y COMO NOSOSTROS POSICIONAMOS NEUSTRO DIV (BOTON) SIMULANDO SER UN PREMIO, SOBRE EL BOTON DE ELIMINAR CUENTA DE SU PERFIL; EL MISMO SIN DARCE CUENTA ESTARA HACIENDO CLICK ELIMINANDOCE EL MISMO, EXPLOTANDOCE ESTA VULNERABILIDAD DE CLICKHACKING CON CSRF DADO QUE SE ESTA CARGANDO DEL LADO DEL USUARIO VICTIMA EN EL IFRAME DEL SITIO.
 
 ***
 
@@ -1301,7 +1300,7 @@
 
 <summary>🤯 EXPLOTACION ✔️</summary>
 
-#### EXPLOTACION
+**EXPLOTACION**
 
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
@@ -1324,19 +1323,19 @@
     Sec-Fetch-Site: none
     Sec-Fetch-User: ?1
     Te: trailers
-    
-    
-    
-    
+
+
+
+
     RESPONSE CON PARAMETRO CARGADO CON NUESTRO MAIL MALISIOSO:
-    
-    
-    
+
+
+
     HTTP/2 200 OK
     Content-Type: text/html; charset=utf-8
     Cache-Control: no-cache
     Content-Length: 6394
-    
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -1434,7 +1433,7 @@
     </html>
     ```
 
-    * CONCLUSION: ENCONTRAMOS LA FORMA DE CARGAR PREVIAMENTE EL PARAMETRO DEL FORMULARIO DEL CAMBIO DEL MAIL PARA QUE SE CARGE NUESTRO MAIL MALISIOSO, LO IDENTIFICAMOS BUSCANDO EL NAME DEL FORMULARIO QUE ESTA EN EL IMPUT Y LO CARGAMOS CON UNA query EN KLA URL SEGUIDA DEL PARAMETRO Y ELCOMO VALOR NEUSTRO MAIL &Y FUNCIONO; TMABIEN LO COMPROVAMOS CON BURPSUITE
+    * CONCLUSION: ENCONTRAMOS LA FORMA DE CARGAR PREVIAMENTE EL PARAMETRO DEL FORMULARIO DEL CAMBIO DEL MAIL PARA QUE SE CARGE NUESTRO MAIL MALISIOSO, LO IDENTIFICAMOS BUSCANDO EL NAME DEL FORMULARIO QUE ESTA EN EL IMPUT Y LO CARGAMOS CON UNA query EN KLA URL SEGUIDA DEL PARAMETRO Y ELCOMO VALOR NEUSTRO MAIL \&Y FUNCIONO; TMABIEN LO COMPROVAMOS CON BURPSUITE
 
 ***
 
@@ -1448,7 +1447,7 @@
 
 <summary>💠 ESCALADA DE PRIVILEGIOS WINDOWS ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS WINDOWS
+**ESCALADA DE PRIVILEGIOS WINDOWS**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -1708,7 +1707,7 @@
 
 <summary>🐧 ESCALADA DE PRIVILEGIOS LINUX ❌</summary>
 
-#### ESCALADA DE PRIVILEGIOS LINUX
+**ESCALADA DE PRIVILEGIOS LINUX**
 
 *   [ ] NETCAT👈 --------------------------------->[https://www.kali.org/tools/netcat/ ](https://www.kali.org/tools/netcat/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/netcat-conexiones.md)
 
@@ -1933,7 +1932,7 @@
 
 <summary>♻️ PIVOTING ❌</summary>
 
-#### PIVOTING
+**PIVOTING**
 
 *   [ ] SSH TUNNELS👈 --------------------------------->[https://www.openssh.com/](https://www.openssh.com/)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/libros-y-mas-pdf/port-forwarding-and-tunnelling-cheatsheet.md)
 
