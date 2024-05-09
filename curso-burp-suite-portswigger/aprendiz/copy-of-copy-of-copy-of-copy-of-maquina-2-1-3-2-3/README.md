@@ -1,5 +1,7 @@
-# 🖕 Copy of Copy of Copy
+# 🖕 Laboratorio: Vulnerabilidad CORS con reflexión de origen básica
 
-Esta práctica de laboratorio contiene una vulnerabilidad de secuencias de comandos entre sitios basada en DOM en la página de inicio. Utiliza $()la función selectora de jQuery para desplazarse automáticamente a una publicación determinada, cuyo título se pasa a través de la location.hashpropiedad.
+Este sitio web tiene una configuración CORS insegura porque confía en todos los orígenes.
 
-Para resolver la práctica de laboratorio, entregue un exploit a la víctima que llame a la print()función en su navegador.
+Para resolver la práctica de laboratorio, cree algo de JavaScript que utilice CORS para recuperar la clave API del administrador y cargue el código en su servidor de explotación. La práctica de laboratorio se resuelve cuando envía correctamente la clave API del administrador.
+
+Puede iniciar sesión en su propia cuenta utilizando las siguientes credenciales:wiener:peter
