@@ -85,3 +85,33 @@ Requisito Atacante: Kali Linux (NMAP) Objetivo: Windows 10 (MS SQL Server) Nmap 
 
 
 {% file src="../../.gitbook/assets/MSSQL for Pentester_ Nmap (español).pdf" %}
+
+***
+
+Es posible que haya utilizado NMAP para realizar un escaneo de red para enumerar el puerto activo servicios en una máquina de destino, pero en algunos escenarios no recibe un mensaje simple si un puerto está abierto o cerrado. Los estados de los puertos no son sus propiedades esenciales; esto muestra cómo los ve nmap. En nmap, un puerto es dividido en seis estados.
+
+<figure><img src="../../.gitbook/assets/Nmap-for-Pentester_-Port-Status-pdf.png" alt=""><figcaption></figcaption></figure>
+
+{% file src="../../.gitbook/assets/Nmap for Pentester_ Port Status.pdf" %}
+
+***
+
+Vamos a escanear la máquina de destino con diferentes escaneos de ping de Nmap y los paquetes de respuesta de Se pueden confirmar diferentes escaneos mediante el análisis del tráfico de Nmap a través de Wireshark. Se realiza un escaneo de ping en Nmap para verificar si el host de destino está vivo o no. Como sabemos, ping por defecto envía la solicitud de eco ICMP y obtiene una respuesta de eco ICMP si el sistema está activo. El escaneo de ping por defecto envía un paquete ARP y obtiene una respuesta para comprobar si el host está activo. Los escaneos de Nmap cambian su comportamiento según la red que están escaneando.  Escaneo de la red local con Nmap donde nmap envía un paquete ARP con cada escaneo  Si se va a escanear una red externa; Nmap envía los siguientes paquetes de solicitud:
+
+1. Solicitud de eco ICMP
+2. Solicitud de marca de tiempo ICMP
+3. TCP SYN al puerto 443
+4. TCP ACK al puerto 80 Para esto, estamos usando el atributo --disable-arp-ping para cambiar el comportamiento de los escaneos de nmap para tratar un red local como red pública
+
+<figure><img src="../../.gitbook/assets/Nmap-for-Pentester_-Ping-Scan-pdf.png" alt=""><figcaption></figcaption></figure>
+
+{% file src="../../.gitbook/assets/Nmap for Pentester_ Ping Scan.pdf" %}
+
+***
+
+
+
+
+
+
+
