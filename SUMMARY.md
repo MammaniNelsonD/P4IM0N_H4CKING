@@ -172,6 +172,7 @@
   * [👹 SCRAPING WEB CON "BS4", otra"RE" Y SIN MODULOS P4IscrapingCbs4.py](curso-hacking-con-python/scraping-web-con-bs4-otra-re-y-sin-modulos-p4iscrapingcbs4.py.md)
   * [👹 GENERADOR DE WORDLIST PARA FUERZA BRUTA P4Iwordlist.py 1.2v](curso-hacking-con-python/generador-de-wordlist-para-fuerza-bruta-p4iwordlist.py-1.2v.md)
   * [👹 SCRAPING de PALABRAS en WEB P4Iestractwebscraping.py](curso-hacking-con-python/scraping-de-palabras-en-web-p4iestractwebscraping.py.md)
+  * [👹 INYECCION DE PAYLOADS WEB DE MANERA VISUAL  FOR BUGHUNTING  P4IvisualInyect.py-v1.5](curso-hacking-con-python/scraping-de-palabras-en-web-p4iestractwebscraping.py-1.md)
 * [🪱 CURSO PYTHON EN 16 DIAS](curso-python-en-16-dias/README.md)
   * [😃 CREADOR DE NOMBRES](curso-python-en-16-dias/creador-de-nombres.md)
   * [😃 CALCULADOR DE COMISIONES](curso-python-en-16-dias/calculador-de-comisiones.md)
